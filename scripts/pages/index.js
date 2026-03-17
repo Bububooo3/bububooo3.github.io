@@ -6,6 +6,7 @@ const lines = [
   "the movie",
   "undefined",
   "The maker of things",
+  "@ .github.io"
 ];
 
 tagline.innerText = lines.at(Math.floor(Math.random() * lines.length));
