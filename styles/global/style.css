@@ -122,8 +122,31 @@ hr {
   padding-right: 10%;
 }
 
+.project-list hr {
+  width: 80%;
+  border: 1px dashed #fffed7;
+}
+
+.project-list span p, details {
+  color: white;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.project-list span details {
+  cursor: pointer;
+}
+
+.project-list span details ul, p {
+  cursor: default;
+}
+
+.project-list span details p {
+  padding-left: 0;
+}
+
 .project-list span .title {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 footer {
@@ -160,4 +183,23 @@ footer {
   .footer-column {
     margin-bottom: 20px;
   }
+}
+
+#context-menu {
+ background-color: #000000;
+ border: 2px solid white;
+ width: 10em;
+ padding: 0.8em 0.6em;
+ font-size: 1.3rem;
+ position: fixed;
+ visibility: hidden;
+}
+
+.item {
+ padding: 0.3em 1.2em;
+}
+
+.item:hover {
+ background-color: #0e7e28;
+ cursor: pointer;
 }

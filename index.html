@@ -22,54 +22,86 @@
     <h3><a href="#who-am-i" id="who-am-i">Who am I?</a></h3>
     <div class="block" style="padding-top: 0;">
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vehicula leo orci, non tristique est feugiat
-            id.
-            Vivamus non dapibus lorem, et eleifend eros. Phasellus scelerisque nec diam vel auctor. Suspendisse volutpat
-            diam et leo sollicitudin dapibus. Morbi sit amet velit vulputate ligula ultricies elementum. Proin efficitur
-            nulla id sapien pharetra, et porttitor ex dictum. Vivamus eu consequat quam. Suspendisse pharetra tortor sed
-            bibendum fringilla. Aenean tempor nunc eu ante elementum hendrerit. Vivamus luctus mollis mi venenatis
-            faucibus.
-            Nulla aliquet libero sed ipsum condimentum pharetra.
+            I'm Richard Scott! Currently, I'm studying as a senior at Jesuit High School in Tampa, Florida. I plan to
+            study Computer Science and/or Mathematics in college. I enjoy game and software development. I have
+            experience coding in Java, C++, Lua, Python, and JS.
             <a href="about.html"> read more...</a>
         </p>
     </div>
     <hr style="margin-top: 2%; margin-bottom: 2%;">
     <h3><a href="#projects" id="#projects">Projects</a></h3>
     <div class="project-list">
+        <hr style="margin-top: 5%;">
         <span>
             <a class="title" href="https://github.com/Dynamo-rblx/Git-Sync-Plugin">GitSync</a>
-            <p class="description">Git Sync provides a simple and efficient way to store and retrieve scripts to and
-                from a cloud-based database (GitHub).</p>
-            <summary title="Information">
-                <details>
-                    <ul>
-                        <li>Sharing scripts (examples (snippets), templates, portfolios, team projects, coding
-                            challenges, etc.)
-                        </li>
+            <p class="description">Git Sync provides Roblox programmers a simple and efficient way to store and retrieve
+                scripts to and from a cloud-based database (GitHub).</p>
+            <details>
+                <summary>See details</summary>
+                <ul>
+                    <li>Sharing scripts (examples (snippets), templates, portfolios, team projects, coding
+                        challenges, etc.)
+                    </li>
 
-                        <li>Transferring script/directories between places/games (ex. You want to make a campaign with
-                            a consistent gameplay system, so you would otherwise have to either copy and paste the
-                            scripts into every place (level) or create a Roblox package and redo everything every time
-                            you update the system)
-                        </li>
+                    <li>Transferring script/directories between places/games (ex. You want to make a campaign with
+                        a consistent gameplay system, so you would otherwise have to either copy and paste the
+                        scripts into every place (level) or create a Roblox package and redo everything every time
+                        you update the system)
+                    </li>
 
-                        <li>Backing up scripts/directories outside of Roblox quickly and easily</li>
+                    <li>Backing up scripts/directories outside of Roblox quickly and easily</li>
 
-                        <li>Saving scripts so that you can view and work on them outside of Roblox Studio on almost
-                            any device
-                        </li>
+                    <li>Saving scripts so that you can view and work on them outside of Roblox Studio on almost
+                        any device
+                    </li>
 
-                        <li>Quickly interacting with GitHub (save/update/import a file or directory in a few clicks,
-                            and get back to coding as soon as possible)
-                        </li>
-                    </ul>
-                    <p>
-                        This is a plugin, which means it operates directly inside of Roblox Studio. This makes it a good
-                        choice for developers who don't need any functions beyond those offered by the plugin and
-                        developers who like having a very quick and easy way to interact with GitHub.
-                    </p>
-                </details>
-            </summary>
+                    <li>Quickly interacting with GitHub (save/update/import a file or directory in a few clicks,
+                        and get back to coding as soon as possible)
+                    </li>
+                </ul>
+                <p>
+                    This is a plugin, which means it operates directly inside of Roblox Studio. This makes it a good
+                    choice for developers who don't need any functions beyond those offered by the plugin (pushing,
+                    pulling, branching, file-viewing) and developers who like having a very quick and easy way to
+                    interact with GitHub.
+                </p>
+            </details>
+        </span>
+
+        <hr>
+
+        <span>
+            <a class="title" href="#">Placeholder</a>
+            <p class="description">I DID say it's a WIP</p>
+            <details>
+                <summary>See details</summary>
+                <ul>
+                    <li>Sharing scripts (examples (snippets), templates, portfolios, team projects, coding
+                        challenges, etc.)
+                    </li>
+
+                    <li>Transferring script/directories between places/games (ex. You want to make a campaign with
+                        a consistent gameplay system, so you would otherwise have to either copy and paste the
+                        scripts into every place (level) or create a Roblox package and redo everything every time
+                        you update the system)
+                    </li>
+
+                    <li>Backing up scripts/directories outside of Roblox quickly and easily</li>
+
+                    <li>Saving scripts so that you can view and work on them outside of Roblox Studio on almost
+                        any device
+                    </li>
+
+                    <li>Quickly interacting with GitHub (save/update/import a file or directory in a few clicks,
+                        and get back to coding as soon as possible)
+                    </li>
+                </ul>
+                <p>
+                    This is a plugin, which means it operates directly inside of Roblox Studio. This makes it a good
+                    choice for developers who don't need any functions beyond those offered by the plugin and
+                    developers who like having a very quick and easy way to interact with GitHub.
+                </p>
+            </details>
         </span>
     </div>
 
@@ -91,8 +123,16 @@
         </div>
     </footer>
 
+    <div id="context-menu">
+        <div class="item"><a href="index.html">Home</div>
+        <div class="item"><a href="about.html">About</a></div>
+        <div class="item"><a href="blogs.html">Blogs</a></div>
+        <div class="item"><a href="#" onclick="window.location.reload()">Refresh</a></div>
+    </div>
+
     <!-- Scripts -->
     <script src="scripts/pages/index.js"></script>
+    <script src="scripts/global/context-menu.js"></script>
     <script src="scripts/global/typewriter.js"></script>
 </body>
 
