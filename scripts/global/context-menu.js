@@ -9,8 +9,8 @@ events.forEach((eventType) => {
     eventType,
     (e) => {
       e.preventDefault();
-      let mouseX = e.clientX || e.touches[0].clientX;
-      let mouseY = e.clientY || e.touches[0].clientY;
+      let mouseX = e.clientX;
+      let mouseY = e.clientY;
       let menuHeight = contextMenu.getBoundingClientRect().height;
       let menuWidth = contextMenu.getBoundingClientRect().width;
       let width = window.innerWidth;
@@ -36,21 +36,6 @@ events.forEach((eventType) => {
     },
     { passive: false },
   );
-});
-
-document.addEventListener("touchend", function (e) {
-  var currentTime = new Date().getTime();
-  var tapLength = currentTime - lastTap;
-  clearTimeout(timeout);
-  if (tapLength < 500 && tapLength > 0) {
-    contextMenu.style.visibility = "hidden";
-    e.preventDefault();
-  } else {
-    timeout = setTimeout(function () {
-      clearTimeout(timeout);
-    }, 500);
-  }
-  lastTap = currentTime;
 });
 
 document.addEventListener("click", function (e) {
