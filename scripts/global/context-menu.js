@@ -1,5 +1,5 @@
 // Made w/ tutorial: https://dev.to/shantanu_jana/custom-right-click-context-menu-in-javascript-4112
-let events = ["contextmenu", "touchstart"];
+let events = ["contextmenu"];
 var timeout;
 var lastTap = 0;
 let contextMenu = document.getElementById("context-menu");
