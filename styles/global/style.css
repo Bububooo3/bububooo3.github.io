@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Datatype:wght@100..900&display=swap");
+
+body {
+  background-color: #000000;
+  text-align: left;
+  padding-left: 15%;
+  padding-right: 15%;
+  scroll-padding-bottom: 10%;
+  border: 10px solid #ffffff;
+
+  font-family: "Datatype", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+div.flex {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+h1 {
+  color: #08ee00;
+  font-size: 100px;
+  margin: 0;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 60px;
+    margin: 0;
+}
+
+p {
+  color: #ffffff;
+}
+
+a {
+  color: #eede00;
+}
+
+a.header {
+  color: #08ee00;
+}
+
+a:hover,
+a:focus {
+  color: #ffee00;
+}
+
+a.header:hover,
+a.header:focus {
+  color: #09ff00;
+}
+
+hr {
+  border: 3px solid #ffffff;
+}
