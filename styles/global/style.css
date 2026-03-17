@@ -16,9 +16,32 @@ body {
 }
 
 div.flex {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+div.flex span {
+  flex: 1 1 auto;
+  flex-grow: 1;
+  font-size: 30px;
+  border-right: 3px solid #ffffff;
+  border-left: 3px solid #ffffff;
+}
+
+div.block {
+  /* border: 2px solid white; */
+  text-align: center;
+  border-radius: 1;
+  color: #ffffff;
+  /* background-color: #383838; */
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 
 h1 {
@@ -28,9 +51,17 @@ h1 {
 }
 
 h2 {
-    color: #ffffff;
-    font-size: 60px;
-    margin: 0;
+  color: #ffffff;
+  font-size: 60px;
+  margin: 0;
+}
+
+h3 {
+  color: #fffed7;
+  font-size: 40px;
+  margin: 0;
+  text-align: center;
+  margin-top: 2%;
 }
 
 p {
@@ -39,6 +70,7 @@ p {
 
 a {
   color: #eede00;
+  text-decoration: none;
 }
 
 a.header {
@@ -47,12 +79,30 @@ a.header {
 
 a:hover,
 a:focus {
-  color: #ffee00;
+  color: #00ff40;
 }
 
 a.header:hover,
 a.header:focus {
   color: #09ff00;
+}
+
+h3 a {
+  color: #fffed7;
+  font-size: 40px;
+  margin: 0;
+  text-align: center;
+  margin-top: 2%;
+  text-decoration: none;
+}
+
+h3 a:hover,
+h3 a:focus {
+  color: #fffed7;
+  font-size: 40px;
+  margin: 0;
+  text-align: center;
+  margin-top: 2%;
 }
 
 hr {
