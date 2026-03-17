@@ -1,0 +1,61 @@
+.project-list span {
+  color: white;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.project-list hr {
+  width: 80%;
+  border: 1px dashed #fffed7;
+}
+
+.project-list span p, details {
+  color: white;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.project-list span details {
+  cursor: pointer;
+}
+
+.project-list span details ul, p {
+  cursor: default;
+}
+
+.project-list span details p {
+  padding-left: 0;
+}
+
+.project-list span .title {
+  font-size: 30px;
+}
+
+div.flex {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+div.flex span {
+  flex: 1 1 auto;
+  flex-grow: 1;
+  font-size: 30px;
+  border-right: 3px solid #ffffff;
+  border-left: 3px solid #ffffff;
+}
+
+div.block {
+  /* border: 2px solid white; */
+  text-align: center;
+  border-radius: 1;
+  color: #ffffff;
+  /* background-color: #383838; */
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
