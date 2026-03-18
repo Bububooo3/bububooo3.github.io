@@ -125,20 +125,24 @@ footer {
 }
 
 #context-menu {
- background-color: #000000;
- border: 2px solid white;
- width: 10em;
- padding: 0.8em 0.6em;
- font-size: 1.3rem;
- position: fixed;
- visibility: hidden;
+  background-color: #000000;
+  border: 2px double white;
+  width: 10em;
+  padding: 0.8em 0.6em;
+  font-size: 1.3rem;
+  position: fixed;
+  visibility: hidden;
 }
 
 .item {
- padding: 0.3em 1.2em;
+  padding: 0.3em 1.2em;
 }
 
 .item:hover {
- background-color: #0e7e28;
- cursor: pointer;
+  background-color: #0e7e28;
+  cursor: pointer;
+}
+
+p {
+  text-indent: 30px;
 }

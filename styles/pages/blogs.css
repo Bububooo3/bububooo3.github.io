@@ -15,10 +15,6 @@
   padding-right: 10%;
 }
 
-.blog-list span {
-  cursor: pointer;
-}
-
 .blog-list span .title {
   font-size: 30px;
 }

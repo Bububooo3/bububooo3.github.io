@@ -1,0 +1,24 @@
+.snippet {
+  background-color: rgb(82, 82, 82);
+  margin: 3% 30% 0 30%;
+  color: white;
+  padding: 0 5%;
+  border: 2px solid white;
+}
+
+table {
+    border: 2px solid white;
+}
+
+tr {
+  background-color: rgb(82, 82, 82);
+  color: white;
+}
+
+td {
+    padding: 10%;
+}
+
+tr:hover {
+    background-color: rgb(143, 143, 143);
+}
