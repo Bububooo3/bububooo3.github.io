@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Datatype:wght@100..900&display=swap");
 
 body {
-  background-color: #000000;
+  background-color: rgb(59,68,75);
   text-align: left;
   padding-left: 15%;
   padding-right: 15%;
@@ -20,12 +20,22 @@ h1 {
   color: #08ee00;
   font-size: 100px;
   margin: 0;
+  text-shadow: none;
+}
+
+h1:hover {
+  text-shadow: 0 0 4px #08ee00;
 }
 
 h2 {
   color: #ffffff;
   font-size: 60px;
   margin: 0;
+  text-shadow: none;
+}
+
+h2:hover {
+  text-shadow: 0 0 4px #ffffff;
 }
 
 h3 {
@@ -34,6 +44,11 @@ h3 {
   margin: 0;
   text-align: center;
   margin-top: 2%;
+  text-shadow: none;
+}
+
+h3:hover {
+  text-shadow: 0 0 4px #fffed7;
 }
 
 h4 {
@@ -41,6 +56,11 @@ h4 {
   font-size: 20px;
   margin: 0;
   margin-top: 2%;
+  text-shadow: none;
+}
+
+h4:hover {
+  text-shadow: 0 0 4px #fffed7;
 }
 
 p {
@@ -54,16 +74,19 @@ a {
 
 a.header {
   color: #08ee00;
+  text-shadow: none;
 }
 
-a:hover,
-a:focus {
+a:not(h1 a, h2 a, h3 a, h4 a):hover,
+a:not(h1 a, h2 a, h3 a, h4 a):focus {
   color: #00ff40;
+  text-shadow: 0 0 4px #08ee00;
 }
 
 a.header:hover,
 a.header:focus {
   color: #09ff00;
+  text-shadow: 0 0 4px #08ee00;
 }
 
 h3 a {
@@ -125,8 +148,9 @@ footer {
 }
 
 #context-menu {
-  background-color: #000000;
-  border: 2px double white;
+  background-color: rgb(59,68,75);
+  border: 2px solid white;
+  border-radius: 10px;
   width: 10em;
   padding: 0.8em 0.6em;
   font-size: 1.3rem;
@@ -136,6 +160,7 @@ footer {
 
 .item {
   padding: 0.3em 1.2em;
+  text-shadow: none;
 }
 
 .item:hover {
@@ -145,4 +170,13 @@ footer {
 
 p {
   text-indent: 30px;
+  text-shadow: none;
+}
+
+details:hover {
+  text-shadow: 0 0 4px #ffffff;
+}
+
+details p {
+  text-shadow: none;
 }

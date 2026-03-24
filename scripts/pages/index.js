@@ -21,4 +21,14 @@ const lines = Object.entries(weightedLines).flatMap(([text, weight]) =>
 );
 
 tagline.innerText = lines[Math.floor(Math.random() * lines.length)];
+
+tagline.addEventListener("mouseenter", function() {
+  const txt = tagline.innerText;
+
+  while (txt == tagline.innerText) {
+    tagline.innerText = lines[Math.floor(Math.random() * lines.length)];
+  }
+});
+
+// Gonna add a secret text adventure eventually
 console.log("Hi!");
