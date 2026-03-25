@@ -34,3 +34,9 @@ function backFxn() {
     window.location.replace("index.html");
   }
 }
+
+function offsite(site) {
+  if (confirm("You are about to visit an external site. Are you sure you want to do this?")) {
+    window.location.assign(site);
+  }
+}

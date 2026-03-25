@@ -4,7 +4,7 @@ const weightedLines = {
   "the programmer": 3,
   "the website": 3,
   "the movie": 3,
-  "undefined": 3,
+  undefined: 3,
   "The maker of things himself": 3,
   "@ github.io": 3,
   "the student": 2,
@@ -22,11 +22,16 @@ const lines = Object.entries(weightedLines).flatMap(([text, weight]) =>
 
 tagline.innerText = lines[Math.floor(Math.random() * lines.length)];
 
-tagline.addEventListener("mouseenter", function() {
+tagline.addEventListener("mouseenter", function () {
   const txt = tagline.innerText;
 
-  while (txt == tagline.innerText) {
+  while (true) {
+    tagline.innerText = "";
     tagline.innerText = lines[Math.floor(Math.random() * lines.length)];
+
+    if (txt != tagline.innerText) {
+      break;
+    }
   }
 });
 
