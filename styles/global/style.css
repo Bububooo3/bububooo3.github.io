@@ -210,3 +210,9 @@ ul,
 ol {
   text-shadow: none;
 }
+
+.back-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
