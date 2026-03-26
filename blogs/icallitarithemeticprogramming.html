@@ -34,6 +34,8 @@
         I delved into online research and discovered a lot of logic I find exciting as a long-time coder and math
         enthusiast.</p>
 
+    <p>If you'd like to skip the introduction and get to the good stuff, <a href="#the-good-stuff">click here!</a></p>
+
     <br>
     <a href="#boolean-algebra" id="boolean-algebra">
         <h3>Boolean Algebra</h3>
@@ -45,7 +47,7 @@
         <p>Where a &in; {0, 1} and b &in; {0, 1}</p>
         <ul>
             <li>AND is represented by <i>a &times; b</i></li>
-            <li>OR is represented by <i>a &plus; b &minus; ab</i></li>
+            <li>OR is represented by <i>a &plus; b &minus; a &times; b</i></li>
             <li>NOT is represented by <i>1 &minus; a</i></li>
             <li>XOR is represented by <i>a &plus; b &minus; 2 &times; a &times; b</i></li>
         </ul>
@@ -58,7 +60,8 @@
     <a href="#and-operator" id="and-operator">
         <h3>AND Operator</h3>
     </a>
-    <p>The simplest operator is AND. In boolean logic, AND is a 2-input function that returns true if and only if both
+    <p>One of the simplest operators is AND. In boolean logic, AND is a 2-input function that returns true if and only
+        if both
         inputs are true. Otherwise, it's false.</p>
     <div class="brown-box snippet">
         f(a, b) &equals; 1 &iff; a &equals; 1 &and; b &equals; 1
@@ -70,79 +73,153 @@
     </div>
     <p>We can draw the <a onclick='offsite("https://en.wikipedia.org/wiki/Truth_table");' style="cursor: pointer;">truth
             table</a> like this:</p>
-        <table class="tbl">
-            <thead>
-                <tr>
-                    <th><h4>A</h4></th>
-                    <th><h4>B</h4></th>
-                    <th><h4>OUTPUT</h4></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="true">1</td>
-                    <td class="true">1</td>
-                    <td class="true">1</td>
-                </tr>
-                <tr>
-                    <td class="true">1</td>
-                    <td class="false">0</td>
-                    <td class="false">0</td>
-                </tr>
-                <tr>
-                    <td class="false">0</td>
-                    <td class="false">0</td>
-                    <td class="false">0</td>
-                </tr>
-                <tr>
-                    <td class="false">0</td>
-                    <td class="true">1</td>
-                    <td class="false">0</td>
-                </tr>
-            </tbody>
-        </table>
+    <table class="tbl">
+        <thead>
+            <tr>
+                <th>
+                    <h4>A</h4>
+                </th>
+                <th>
+                    <h4>B</h4>
+                </th>
+                <th>
+                    <h4>OUTPUT</h4>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="true">1</td>
+                <td class="true">1</td>
+                <td class="true">1</td>
+            </tr>
+            <tr>
+                <td class="true">1</td>
+                <td class="false">0</td>
+                <td class="false">0</td>
+            </tr>
+            <tr>
+                <td class="false">0</td>
+                <td class="false">0</td>
+                <td class="false">0</td>
+            </tr>
+            <tr>
+                <td class="false">0</td>
+                <td class="true">1</td>
+                <td class="false">0</td>
+            </tr>
+        </tbody>
+    </table>
 
     <br>
     <a href="#or-operator" id="or-operator">
         <h3>OR Operator</h3>
+    </a>
+    <p>OR isn't complicated either. OR is another 2-input function, and it returns true if and only
+        either of the inputs are true. If nothing is true, then OR returns false.</p>
+    <div class="brown-box snippet">
+        f(a, b) &equals; 1 &iff; a &equals; 1 &or; b &equals; 1
+    </div>
+    <p>Thus, the operator can also be represented by multiplying the two inputs, since this process will only return 1
+        if both values are 1 and not 0.</p>
+    <div class="brown-box snippet">
+        f(a, b) &equals; a &plus; b &minus; a &times; b
+    </div>
+    <p>But WHERE IN THE WORLD did this formula come from? Well, according to <a
+            onclick="offsite('https://en.wikipedia.org/wiki/De_Morgan%27s_laws')" style="cursor: pointer;">De Morgan's
+            Laws</a>, </p>
+    <p>Let's make another truth table for simplicity's sake:</p>
+    <table class="tbl">
+        <thead>
+            <tr>
+                <th>
+                    <h4>A</h4>
+                </th>
+                <th>
+                    <h4>B</h4>
+                </th>
+                <th>
+                    <h4>OUTPUT</h4>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="true">1</td>
+                <td class="true">1</td>
+                <td class="true">1</td>
+            </tr>
+            <tr>
+                <td class="true">1</td>
+                <td class="false">0</td>
+                <td class="false">0</td>
+            </tr>
+            <tr>
+                <td class="false">0</td>
+                <td class="false">0</td>
+                <td class="false">0</td>
+            </tr>
+            <tr>
+                <td class="false">0</td>
+                <td class="true">1</td>
+                <td class="false">0</td>
+            </tr>
+        </tbody>
+    </table>
 
-        <!-- Footer -->
-        <footer>
-            <div class="footer-column">
-                <h4>Fast Travel</h4>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../about.html">About</a></li>
-                    <li><a href="../blogs.html">Blogs</a></li>
-                </ul>
-                <div style="margin: 15% 0;"></div>
-                <p><i style="color: #d6d6d6; font-size: 15px;">[Right-click] to fast travel w/ context menu</i></p>
-            </div>
-            <div class="footer-column">
-                <h4>Contact</h4>
-                <p>Email: <a href="mailto:rscott7423@gmail.com">rscott7423@gmail.com</a></p>
-                <p>Created by Richard Scott</p>
-            </div>
-        </footer>
+    <br>
+    <a href="#the-good-stuff" id="the-good-stuff">
+        <h3>The Good Stuff</h3>
+    </a>
+    <p>Now that we know basic operations, I can get started explaining the interesting part. With nothing but
+        arithmetic, we can create functions like the nth prime function from earlier! Ours, of course, will be a
+        little more effective. Depending on the function's purpose, there can be a lot going into it. I'll include
+        some fun practice, but if you find these tools as interesting as I do you'll probably just run wild with
+        them anyways. The especially exciting part about this is that you can incorporate all kinds of knowledge
+        from all kinds of mathematics into your "programs"!</p>
 
-        <!-- Context Menu -->
-        <div id="context-menu">
-            <h4 style="margin-top: 0; margin-bottom: 1%; text-align: center;">Fast Travel</h4>
-            <hr style="border: 1px solid white;">
-            <div class="item"><a href="../index.html">Home</div>
-            <div class="item"><a href="../about.html">About</a></div>
-            <div class="item"><a href="../blogs.html">Blogs</a></div>
-            <hr style="border: 1px solid white;">
-            <div class="item"><a href="#" onclick="window.location.reload()">reload page</a></div>
-            <div class="item"><a href="#" onclick="copyTxt()">copy selection</a></div>
-            <hr style="border: 1px solid white;">
-            <div class="item"><a href="#" onclick="randomBlog()">random blog</a></div>
+    <br>
+    <a href="#simple-conditionals" id="simple-conditionals">
+        <h3>Simple Conditionals</h3>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-column">
+            <h4>Fast Travel</h4>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../blogs.html">Blogs</a></li>
+            </ul>
+            <div style="margin: 15% 0;"></div>
+            <p><i style="color: #d6d6d6; font-size: 15px;">[Right-click] to fast travel w/ context menu</i></p>
         </div>
+        <div class="footer-column">
+            <h4>Contact</h4>
+            <p>Email: <a href="mailto:rscott7423@gmail.com">rscott7423@gmail.com</a></p>
+            <p>Created by Richard Scott</p>
+        </div>
+    </footer>
 
-        <!-- Scripts -->
-        <script src="../scripts/global/blog.js"></script>
-        <script src="../scripts/global/context-menu.js"></script>
-        <script src="../scripts/global/typewriter.js"></script>
+    <!-- Context Menu -->
+    <div id="context-menu">
+        <h4 style="margin-top: 0; margin-bottom: 1%; text-align: center;">Fast Travel</h4>
+        <hr style="border: 1px solid white;">
+        <div class="item"><a href="../index.html">Home</div>
+        <div class="item"><a href="../about.html">About</a></div>
+        <div class="item"><a href="../blogs.html">Blogs</a></div>
+        <hr style="border: 1px solid white;">
+        <div class="item"><a href="#" onclick="window.location.reload()">reload page</a></div>
+        <div class="item"><a href="#" onclick="copyTxt()">copy selection</a></div>
+        <hr style="border: 1px solid white;">
+        <div class="item"><a href="#" onclick="randomBlog()">random blog</a></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../scripts/global/blog.js"></script>
+    <script src="../scripts/global/context-menu.js"></script>
+    <script src="../scripts/global/typewriter.js"></script>
 </body>
 
 </html>
