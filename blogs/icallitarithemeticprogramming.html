@@ -35,8 +35,8 @@
         enthusiast.</p>
 
     <br>
-    <a href="#boolean-operators" id="boolean-operators">
-        <h3>Boolean Operators</h3>
+    <a href="#boolean-algebra" id="boolean-algebra">
+        <h3>Boolean Algebra</h3>
     </a>
     <p>Let's start simple. The way boolean logic works is that we have integers a and b, which can each be
         either 0 or 1. The logical operators AND, OR, NOT, and XOR all return 0 or 1 as well.</p>
@@ -51,61 +51,98 @@
         </ul>
     </div>
 
-    <p> But where do these come from? Well, it begins with the AND operator and the NOT operator, which are both pretty
-        intuitive. 1 times 1 means both a and b are true, and any other combination returns 0 aka false.</p>
+    <p> Let's look at deriving these formulas, though. I promise it's intuitive. From now on, I'll be using 0
+        interchangeably with false
+        and 1 interchangeably with true.</p>
+    <br>
+    <a href="#and-operator" id="and-operator">
+        <h3>AND Operator</h3>
+    </a>
+    <p>The simplest operator is AND. In boolean logic, AND is a 2-input function that returns true if and only if both
+        inputs are true. Otherwise, it's false.</p>
     <div class="brown-box snippet">
-        <table>
-            <tr>
-                <th>Operator</th>
-                <th>a</th>
-                <th>b</th>
-                <th>value</th>
-            </tr>
-            <tr>
-                <td>
-                    AND
-                </td>
-            </tr>
+        f(a, b) &equals; 1 &iff; a &equals; 1 &and; b &equals; 1
+    </div>
+    <p>Thus, the operator can also be represented by multiplying the two inputs, since this process will only return 1
+        if both values are 1 and not 0.</p>
+    <div class="brown-box snippet">
+        f(a, b) &equals; a &times; b
+    </div>
+    <p>We can draw the <a onclick='offsite("https://en.wikipedia.org/wiki/Truth_table");' style="cursor: pointer;">truth
+            table</a> like this:</p>
+        <table class="tbl">
+            <thead>
+                <tr>
+                    <th><h4>A</h4></th>
+                    <th><h4>B</h4></th>
+                    <th><h4>OUTPUT</h4></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="true">1</td>
+                    <td class="true">1</td>
+                    <td class="true">1</td>
+                </tr>
+                <tr>
+                    <td class="true">1</td>
+                    <td class="false">0</td>
+                    <td class="false">0</td>
+                </tr>
+                <tr>
+                    <td class="false">0</td>
+                    <td class="false">0</td>
+                    <td class="false">0</td>
+                </tr>
+                <tr>
+                    <td class="false">0</td>
+                    <td class="true">1</td>
+                    <td class="false">0</td>
+                </tr>
+            </tbody>
         </table>
-    </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-column">
-            <h4>Fast Travel</h4>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../about.html">About</a></li>
-                <li><a href="../blogs.html">Blogs</a></li>
-            </ul>
-            <div style="margin: 15% 0;"></div>
-            <p><i style="color: #d6d6d6; font-size: 15px;">[Right-click] to fast travel w/ context menu</i></p>
+    <br>
+    <a href="#or-operator" id="or-operator">
+        <h3>OR Operator</h3>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-column">
+                <h4>Fast Travel</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../blogs.html">Blogs</a></li>
+                </ul>
+                <div style="margin: 15% 0;"></div>
+                <p><i style="color: #d6d6d6; font-size: 15px;">[Right-click] to fast travel w/ context menu</i></p>
+            </div>
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <p>Email: <a href="mailto:rscott7423@gmail.com">rscott7423@gmail.com</a></p>
+                <p>Created by Richard Scott</p>
+            </div>
+        </footer>
+
+        <!-- Context Menu -->
+        <div id="context-menu">
+            <h4 style="margin-top: 0; margin-bottom: 1%; text-align: center;">Fast Travel</h4>
+            <hr style="border: 1px solid white;">
+            <div class="item"><a href="../index.html">Home</div>
+            <div class="item"><a href="../about.html">About</a></div>
+            <div class="item"><a href="../blogs.html">Blogs</a></div>
+            <hr style="border: 1px solid white;">
+            <div class="item"><a href="#" onclick="window.location.reload()">reload page</a></div>
+            <div class="item"><a href="#" onclick="copyTxt()">copy selection</a></div>
+            <hr style="border: 1px solid white;">
+            <div class="item"><a href="#" onclick="randomBlog()">random blog</a></div>
         </div>
-        <div class="footer-column">
-            <h4>Contact</h4>
-            <p>Email: <a href="mailto:rscott7423@gmail.com">rscott7423@gmail.com</a></p>
-            <p>Created by Richard Scott</p>
-        </div>
-    </footer>
 
-    <!-- Context Menu -->
-    <div id="context-menu">
-        <h4 style="margin-top: 0; margin-bottom: 1%; text-align: center;">Fast Travel</h4>
-        <hr style="border: 1px solid white;">
-        <div class="item"><a href="../index.html">Home</div>
-        <div class="item"><a href="../about.html">About</a></div>
-        <div class="item"><a href="../blogs.html">Blogs</a></div>
-        <hr style="border: 1px solid white;">
-        <div class="item"><a href="#" onclick="window.location.reload()">reload page</a></div>
-        <div class="item"><a href="#" onclick="copyTxt()">copy selection</a></div>
-        <hr style="border: 1px solid white;">
-        <div class="item"><a href="#" onclick="randomBlog()">random blog</a></div>
-    </div>
-
-    <!-- Scripts -->
-    <script src="../scripts/global/blog.js"></script>
-    <script src="../scripts/global/context-menu.js"></script>
-    <script src="../scripts/global/typewriter.js"></script>
+        <!-- Scripts -->
+        <script src="../scripts/global/blog.js"></script>
+        <script src="../scripts/global/context-menu.js"></script>
+        <script src="../scripts/global/typewriter.js"></script>
 </body>
 
 </html>

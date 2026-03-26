@@ -2,7 +2,7 @@
   background-color: rgb(82, 82, 82);
   margin: 3% 30% 0 30%;
   color: white;
-  padding: 0 5%;
+  padding: 1% 5%;
   border: 2px solid white;
 }
 
@@ -15,19 +15,44 @@
   color: #08ee00;
 }
 
-table {
-    border: 2px solid white;
-}
-
-tr {
-  background-color: rgb(82, 82, 82);
+.tbl {
   color: white;
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 30%;
+  border: 2px solid white;
+  box-shadow: 5px 5px 20px #0000000c;
+  border-radius: 10px;
+  background-color: rgb(59, 68, 75);
+  padding: 2px 4px;
 }
 
-td {
-    padding: 10%;
+.tbl:hover {
+  box-shadow: 5px 5px 20px #0000003a;
 }
 
-tr:hover {
-    background-color: rgb(143, 143, 143);
+.tbl th,
+.tbl td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.tbl thead {
+  color: #eede00;
+  background-color: rgb(82, 82, 82);
+  font-weight: bold;
+  font-size: 24;
+}
+
+.tbl tbody tr:hover {
+  background-color: rgb(167, 167, 167);
+}
+
+.true {
+  background-color: #4bf04b8c;
+}
+
+.false {
+  background-color: #f04b4b86;
 }
