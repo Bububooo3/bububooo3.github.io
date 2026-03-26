@@ -135,6 +135,7 @@ footer {
   display: flex;
   justify-content: space-between;
   border: none;
+  border-radius: 10px;
   box-shadow: 5px 5px 20px #0000000c;
   padding-top: 3%;
   padding-left: 10%;
@@ -178,11 +179,16 @@ footer:hover {
   background-color: rgb(59, 68, 75);
   border: 2px solid white;
   border-radius: 10px;
+  box-shadow: 5px 5px 20px #0000000c;
   width: 10em;
   padding: 0.8em 0.6em;
   font-size: 1.3rem;
   position: fixed;
   visibility: hidden;
+}
+
+#context-menu:hover {
+  box-shadow: 5px 5px 20px #0000003a;
 }
 
 .item {
@@ -212,7 +218,38 @@ ol {
 }
 
 .back-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#back-btn {
+  box-shadow: 5px 5px 20px #0000000c;
+  font-size: 40px;
+  padding-right: 5%;
+  padding-left: 5%;
+  margin-right: 5%;
+  cursor: pointer;
+  background-color: #ffffff1f;
+}
+
+#back-btn:hover {
+  box-shadow: 5px 5px 20px #0000003a;
+}
+
+.brown-box {
+  box-shadow: 5px 5px 20px #0000000c;
+  border-radius: 10px;
+  background-color: rgb(59, 68, 75);
+  padding: 2px 4px;
+  margin: 0 0;
+}
+
+.brown-box:hover {
+  box-shadow: 5px 5px 20px #0000003a;
+}
+
+::selection {
+  color: white;
+  background: hsl(118, 50%, 47%);
 }

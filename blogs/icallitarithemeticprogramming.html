@@ -15,8 +15,7 @@
     </b>
     <div class="back-container">
         <h2 style="margin-bottom: 2%;" class="typewriter">I Call It Arithmetic Programming - 3/17/26</h2>
-        <a onclick="backFxn();"
-            style="font-size: 40px; padding-right: 5%; padding-left: 5%; margin-right: 5%; cursor: pointer; background-color: #ffffff1f;">
+        <a onclick="backFxn();" id="back-btn">
             Back
         </a>
     </div>
@@ -30,42 +29,45 @@
 
     <p>I found out about this while learning about C.P. Willans' <a
             onclick='offsite("https://mathworld.wolfram.com/WillansFormula.html");' style="cursor: pointer;">prime
-            factory</a>. It's highly inefficient, but
+            factory</a>. The formula is highly inefficient, but
         it's a good demonstration of how we can use math as a programming language. In an effort to dissect the formula,
         I delved into online research and discovered a lot of logic I find exciting as a long-time coder and math
         enthusiast.</p>
 
-    <a href="#operators" id="operators">
-        <h3>Operators</h3>
+    <br>
+    <a href="#boolean-operators" id="boolean-operators">
+        <h3>Boolean Operators</h3>
     </a>
     <p>Let's start simple. The way boolean logic works is that we have integers a and b, which can each be
         either 0 or 1. The logical operators AND, OR, NOT, and XOR all return 0 or 1 as well.</p>
     <p>We're going to assume this widely accepted idea that 0 represents false and 1 represents true.</p>
-    <div class="snippet">
+    <div class="brown-box snippet">
+        <p>Where a &in; {0, 1} and b &in; {0, 1}</p>
         <ul>
-            <li>AND is represented by <i>ab</i></li>
-            <li>OR is represented by <i>a + b - ab</i></li>
-            <li>NOT is represented by <i>1 - a</i></li>
-            <li>XOR is represented by <i>a + b - 2ab</i></li>
+            <li>AND is represented by <i>a &times; b</i></li>
+            <li>OR is represented by <i>a &plus; b &minus; ab</i></li>
+            <li>NOT is represented by <i>1 &minus; a</i></li>
+            <li>XOR is represented by <i>a &plus; b &minus; 2 &times; a &times; b</i></li>
         </ul>
     </div>
 
     <p> But where do these come from? Well, it begins with the AND operator and the NOT operator, which are both pretty
         intuitive. 1 times 1 means both a and b are true, and any other combination returns 0 aka false.</p>
-
-    <table>
-        <tr>
-            <th>Operator</th>
-            <th>a</th>
-            <th>b</th>
-            <th>value</th>
-        </tr>
-        <tr>
-            <td>
-                AND
-            </td>
-        </tr>
-    </table>
+    <div class="brown-box snippet">
+        <table>
+            <tr>
+                <th>Operator</th>
+                <th>a</th>
+                <th>b</th>
+                <th>value</th>
+            </tr>
+            <tr>
+                <td>
+                    AND
+                </td>
+            </tr>
+        </table>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -95,6 +97,8 @@
         <div class="item"><a href="../blogs.html">Blogs</a></div>
         <hr style="border: 1px solid white;">
         <div class="item"><a href="#" onclick="window.location.reload()">reload page</a></div>
+        <div class="item"><a href="#" onclick="copyTxt()">copy selection</a></div>
+        <hr style="border: 1px solid white;">
         <div class="item"><a href="#" onclick="randomBlog()">random blog</a></div>
     </div>
 

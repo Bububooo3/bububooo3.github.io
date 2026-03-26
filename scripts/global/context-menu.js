@@ -43,3 +43,16 @@ document.addEventListener("click", function (e) {
     contextMenu.style.visibility = "hidden";
   }
 });
+
+async function copyTxt() {
+  const txt = window.getSelection().toString();
+
+  if (txt) {
+    try {
+      await navigator.clipboard.writeText(txt);
+    } catch (err) {
+      console.error("Failed to copy text: ", err);
+      alert("Copy failed");
+    }
+  }
+}

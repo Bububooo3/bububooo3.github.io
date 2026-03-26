@@ -6,6 +6,15 @@
   border: 2px solid white;
 }
 
+.snippet i {
+  color: #eede00;
+}
+
+.snippet u {
+  text-decoration: none;
+  color: #08ee00;
+}
+
 table {
     border: 2px solid white;
 }
