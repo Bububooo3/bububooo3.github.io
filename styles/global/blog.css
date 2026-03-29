@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Datatype:wght@100..900&display=swap");
+
 .snippet {
   background-color: rgb(82, 82, 82);
-  margin: 3% 30% 0 30%;
+  margin: 3% 30% 3% 30%;
   color: white;
   padding: 1% 5%;
   border: 2px solid white;
@@ -55,4 +57,57 @@
 
 .false {
   background-color: #f04b4b86;
+}
+
+details {
+  color: white;
+  text-align: center;
+}
+
+details:hover {
+  text-shadow: 0 0 4px #ffffff;
+}
+
+details div,
+p,
+li,
+ul,
+ol {
+  text-shadow: none;
+}
+
+summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+hr.light {
+  border: 1px dashed white;
+}
+
+body {
+  transition: background-color 0.8s ease-in-out;
+}
+
+.section {
+  min-height: 50vh;
+}
+
+.correct {
+  color: #4bf04b;
+  border: 2px solid #4bf04b;
+}
+
+.incorrect {
+  color: #f04b4b;
+  border: 2px solid #f04b4b;
+}
+
+.answer-box {
+  white-space: pre-line;
+  outline: 0px solid transparent;
 }

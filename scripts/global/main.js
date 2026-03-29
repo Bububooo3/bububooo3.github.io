@@ -3,10 +3,6 @@ const pages = [
   // "blogs/sample.html"
 ];
 
-function randomBlog() {
-  window.location.href = pages[Math.floor(Math.random() * pages.length)];
-}
-
 var n = document.getElementsByTagName("h1")[0];
 
 if (n.id != "index") {
@@ -25,6 +21,10 @@ if (n.id != "index") {
   n.addEventListener("mouseleave", (e) => {
     n.innerText = "Richard Scott";
   });
+}
+
+function randomBlog() {
+  window.location.href = pages[Math.floor(Math.random() * pages.length)];
 }
 
 function backFxn() {
