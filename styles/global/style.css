@@ -51,10 +51,12 @@ h1 {
   font-size: 100px;
   margin: 0;
   text-shadow: none;
+  transform: scale(1,1);
 }
 
 h1:hover {
   text-shadow: 0 0 4px #08ee00;
+  transform: scale(1.0115,1.0115);
 }
 
 h2 {
@@ -63,10 +65,12 @@ h2 {
   font-size: 60px;
   margin: 0;
   text-shadow: none;
+  transform: scale(1,1);
 }
 
 h2:hover {
   text-shadow: 0 0 4px #ffffff;
+  transform: scale(1.0115,1.0115);
 }
 
 h3 {
@@ -77,10 +81,12 @@ h3 {
   text-align: center;
   margin-top: 2%;
   text-shadow: none;
+  transform: scale(1,1);
 }
 
 h3:hover {
   text-shadow: 0 0 4px #fffed7;
+  transform: scale(1.0115,1.0115);
 }
 
 h4 {
@@ -90,10 +96,12 @@ h4 {
   margin: 0;
   margin-top: 2%;
   text-shadow: none;
+  transform: scale(1,1);
 }
 
 h4:hover {
   text-shadow: 0 0 4px #fffed7;
+  transform: scale(1.0115,1.0115);
 }
 
 p {

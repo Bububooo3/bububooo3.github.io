@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const answers = {
-  "XOR-eqn": ["a + b - 2 * a * b", "a+b-2*ab", "a+b-2ab"],
+  "XOR-eqn": ["a+b-2*a*b", "a+b-2*ab", "a+b-2ab", "a+b-2xab", "a+b-2xaxb"],
 };
 
 // Quiz
@@ -136,3 +136,6 @@ for (let i = 0; i < boxes.length; i++) {
     }
   });
 }
+
+// Contents Box
+const contents = document.getElementById("content-box");
