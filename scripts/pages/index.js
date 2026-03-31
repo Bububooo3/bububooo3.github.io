@@ -4,7 +4,7 @@ const weightedLines = {
   "the programmer": 3,
   "the website": 3,
   "the movie": 3,
-  undefined: 3,
+  "undefined": 3,
   "The maker of things himself": 3,
   "@ github.io": 3,
   "the student": 2,

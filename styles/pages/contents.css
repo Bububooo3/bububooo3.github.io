@@ -1,0 +1,6 @@
+#container ul, p {
+    list-style: none;
+    font-size: 30px;
+    text-align: center;
+    line-height: 5vh;
+}

@@ -286,3 +286,7 @@ ol {
   color: white;
   background: hsl(118, 50%, 47%);
 }
+
+*:focus {
+  outline: none;
+}

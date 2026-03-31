@@ -1,29 +1,19 @@
-Ok, so basically there are like 3 things you have to do:
+Ok, so basically there are like 3 things you have to do to implement a new blog:
 
 1. Write the blog
-   - Use the "sample.html" template
-   - Change the subtitle to [BLOG TITLE - MM/DD/YY]
+   - Duplicate the "sample.html" template
+   - Change the "title" header to `BLOG TITLE - MM/DD/YY` format
    - Make sure the file is in the `../blogs` directory
+   - Change all of the CUSTOM STUFF and MORE CUSTOM STUFF data
+   - YES, we make a new rendition of the dolphin for every blog.
 
 2. Add the blog to the "random blog" arrays
    - They're `../scripts/global/blog.js` AND `../scripts/global/main.js`
-   - The blog one needs .. in front of it, but the main one doesn't
+   - The blog one needs `../` in front of it, but the main one doesn't
    - If you get confused, just copy what's already going on there
    - Just copy the name from VSC Explorer and paste it as-is
    - Then move on
 
-3. Add the blog to the blogs list in `../blogs.html`
-   - The href should be the exact same as what you put in the "random blog" array
-   - Paste this above the top separator.
-   - Go on, add it. Add it to the top using the following format:
-   - ```html
-     <!-- SEPARATOR -->
-     <span>
-       <a class="title" href="SAME_AS_FOR_RANDOM_BLOG_ARRAY">[TITLE]</a>
-       <p class="description">[DESCRIPTION]</p>
-     </span>
+3. Add the blog path to the blogs array in `../scripts/pages/blogs.js`
 
-     <hr style="margin-top: 2%;" />
-     ```
-
-4. You're done! Voila! Idk maybe I should automate this...
+4. You're done! Voila! Idk maybe I should automate this more...
