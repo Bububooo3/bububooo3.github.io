@@ -44,6 +44,12 @@ document.addEventListener("click", function (e) {
   }
 });
 
+document.addEventListener("scroll", function (e) {
+  if (!contextMenu.contains(e.target)) {
+    contextMenu.style.visibility = "hidden";
+  }
+});
+
 async function copyTxt() {
   const txt = window.getSelection().toString();
 

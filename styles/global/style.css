@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Datatype:wght@100..900&display=swap");
+/* @font-face {
+  font-family: "JetBrains Monospace";
+  src:
+    url("../../resources/fonts/JetBrainsMono-2.304/fonts/webfonts/JetBrainsMono-Regular.woff2")
+      format("woff2"),
+    url("../../resources/fonts/JetBrainsMono-2.304/fonts/ttf/JetBrainsMono-Regular.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+} */
 
 :target {
   scroll-margin-top: 10vh;
@@ -17,6 +28,7 @@ body {
   border: 10px solid #ffffff;
 
   font-family: "Datatype", monospace;
+  /* font-family: "JetBrains Monospace", monospace; */
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
@@ -51,12 +63,12 @@ h1 {
   font-size: 100px;
   margin: 0;
   text-shadow: none;
-  transform: scale(1,1);
+  transform: scale(1, 1);
 }
 
 h1:hover {
   text-shadow: 0 0 4px #08ee00;
-  transform: scale(1.0115,1.0115);
+  transform: scale(1.0115, 1.0115);
 }
 
 h2 {
@@ -65,12 +77,12 @@ h2 {
   font-size: 60px;
   margin: 0;
   text-shadow: none;
-  transform: scale(1,1);
+  transform: scale(1, 1);
 }
 
 h2:hover {
   text-shadow: 0 0 4px #ffffff;
-  transform: scale(1.0115,1.0115);
+  transform: scale(1.0115, 1.0115);
 }
 
 h3 {
@@ -81,12 +93,12 @@ h3 {
   text-align: center;
   margin-top: 2%;
   text-shadow: none;
-  transform: scale(1,1);
+  transform: scale(1, 1);
 }
 
 h3:hover {
   text-shadow: 0 0 4px #fffed7;
-  transform: scale(1.0115,1.0115);
+  transform: scale(1.0115, 1.0115);
 }
 
 h4 {
@@ -96,12 +108,12 @@ h4 {
   margin: 0;
   margin-top: 2%;
   text-shadow: none;
-  transform: scale(1,1);
+  transform: scale(1, 1);
 }
 
 h4:hover {
   text-shadow: 0 0 4px #fffed7;
-  transform: scale(1.0115,1.0115);
+  transform: scale(1.0115, 1.0115);
 }
 
 p {

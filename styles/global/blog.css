@@ -112,11 +112,11 @@ body {
   outline: 0px solid transparent;
 }
 
-#content-box {
+.content-box {
   /* position: absolute; */
   right: 0;
   bottom: 1vh;
-  z-index: 1000;
+  /* z-index: 10; */
   transition: transform 0.5s ease;
   background-color: rgba(0, 0, 0, 0);
   border: none;
@@ -132,7 +132,7 @@ body {
   height: fit-content;
 }
 
-#content-box:hover {
+.content-box:hover {
   box-shadow: 5px 5px 20px #0000003a;
   background-color: #49e26f1f;
 }
