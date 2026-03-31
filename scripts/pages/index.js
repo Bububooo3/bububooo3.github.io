@@ -16,6 +16,8 @@ const weightedLines = {
   "the one who knocks": 2,
 };
 
+var debounce = false;
+
 const lines = Object.entries(weightedLines).flatMap(([text, weight]) =>
   Array(weight).fill(text),
 );
@@ -23,6 +25,12 @@ const lines = Object.entries(weightedLines).flatMap(([text, weight]) =>
 tagline.innerText = lines[Math.floor(Math.random() * lines.length)];
 
 tagline.addEventListener("mouseenter", function () {
+  if (debounce) {
+    return;
+  }
+
+  debounce = true;
+
   const txt = tagline.innerText;
 
   while (true) {
@@ -33,6 +41,8 @@ tagline.addEventListener("mouseenter", function () {
       break;
     }
   }
+
+  debounce = false;
 });
 
 // Gonna add a secret text adventure eventually
