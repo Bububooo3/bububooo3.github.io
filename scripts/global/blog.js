@@ -5,23 +5,13 @@ const pages = [
 
 var n = document.getElementsByTagName("h1")[0];
 
-if (n.id != "index") {
-  n.addEventListener("mouseenter", (e) => {
-    n.innerText = "Richard Scott?";
-  });
+n.addEventListener("mouseenter", (e) => {
+  n.innerHTML = "Richard Scott <i class='material-icons'  style='font-size: inherit; vertical-align: middle;'>compare_arrows home</i>";
+});
 
-  n.addEventListener("mouseleave", (e) => {
-    n.innerText = "Richard Scott";
-  });
-} else {
-  n.addEventListener("mouseenter", (e) => {
-    n.innerText = "Richard Scott.";
-  });
-
-  n.addEventListener("mouseleave", (e) => {
-    n.innerText = "Richard Scott";
-  });
-}
+n.addEventListener("mouseleave", (e) => {
+  n.innerText = "Richard Scott";
+});
 
 // Functions
 function backFxn() {
