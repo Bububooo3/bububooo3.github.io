@@ -137,5 +137,11 @@ for (let i = 0; i < boxes.length; i++) {
   });
 }
 
-// Contents Box
-const contents = document.getElementById("content-box");
+const contents_page =
+  "contents.html?blog=" + window.location.pathname.split("/").pop();
+const links = document.querySelectorAll(".section a");
+links.forEach((link) => {
+  if (link.getElementsByTagName("h3").length == 1) {
+    link.href = contents_page;
+  }
+});
