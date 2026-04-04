@@ -2,39 +2,63 @@
 
 <head>
     <title>R's Space</title>
-    <link rel="icon" type="image/x-icon" href="resources/686aee811f17a9136433502197_1b26f13217bcd743b4c9_512.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="R's Space" />
+    <meta property="og:description" content="Where dreams and wonders go to relax and have brunch." />
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/82393276?v=4" />
+    <meta property="og:url" content="https://bububooo3.github.io/index.html" />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#08ee00" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/82393276?v=4">
     <link rel="stylesheet" type="text/css" href="styles/global/style.css">
     <link rel="stylesheet" type="text/css" href="styles/pages/index.css">
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
 </head>
 
 <body>
     <b>
-        <h1 style="padding-top: 5%;" class="typewriter">Richard Scott</h1>
+        <a href="index.html">
+            <h1 style="padding-top: 5%; cursor: pointer;" class="typewriter" id="index">Richard Scott</h1>
+        </a>
     </b>
     <h2 style="margin-bottom: 2%;" id="tagline" class="typewriter">A guy who makes things</h2>
     <hr>
     <div class="flex">
         <span><a href="about.html" class="typewriter">About</a></span>
         <span><a href="blogs.html" class="typewriter">Blogs</a></span>
-        <span><a href="https://github.com/Bububooo3" class="typewriter">GitHub</a></span>
+        <span>
+            <a onclick='offsite("https://github.com/Bububooo3");' style="cursor: pointer;" class="typewriter">GitHub</a>
+        </span>
     </div>
     <hr>
-    <h3><a href="#who-am-i" id="who-am-i">Who am I?</a></h3>
-    <div class="block" style="padding-top: 0;">
-        <p>
-            I'm Richard Scott! Currently, I'm studying as a senior at Jesuit High School in Tampa, Florida. I plan to
-            study Computer Science and/or Mathematics in college. I enjoy game and software development. I have
-            experience coding in Java, C++, Lua, Python, and JS.
-            <a href="about.html"> read more...</a>
-        </p>
+    <br>
+    <div class="brown-box">
+        <a href="#who-am-i" id="who-am-i">
+            <h3>Who am I?</h3>
+        </a>
+        <div class="block" style="padding-top: 0;">
+            <p>
+                I'm Richard Scott! Currently, I'm studying as a senior at Jesuit High School in Tampa, Florida. I plan
+                to
+                study Computer Science and/or Mathematics in college. I enjoy game and software development. I have
+                experience coding in Java, C++, Lua, Python, and JS.
+                <a href="about.html"> read more...</a>
+            </p>
+        </div>
     </div>
     <hr style="margin-top: 2%; margin-bottom: 2%;">
-    <h3><a href="#projects" id="projects">Projects</a></h3>
+    <br>
+    <a href="#projects" id="projects">
+        <h3>Projects</h3>
+    </a>
     <div class="project-list">
         <hr style="margin-top: 5%;">
         <span>
-            <a class="title" href="https://github.com/Dynamo-rblx/Git-Sync-Plugin">GitSync</a>
-            <p class="description">Git Sync is a Luau-based developer tool that provides Roblox programmers a simple and
+            <a class="title" onclick='offsite("https://github.com/Dynamo-rblx/Git-Sync-Plugin");'
+                style="cursor: pointer;">GitSync</a>
+            <p class="description">Git Sync is a Luau-based developer tool that provides Roblox programmers a simple
+                and
                 efficient way to store and retrieve scripts to and from a cloud-based database (GitHub).</p>
             <details>
                 <summary>See details</summary>
@@ -71,14 +95,16 @@
         <hr>
 
         <span>
-            <a class="title" href="https://github.com/Bububooo3/matrix-lua">Matrix Datatype</a>
+            <a class="title" onclick='offsite("https://github.com/Bububooo3/matrix-lua");'
+                style="cursor: pointer;">Matrix Datatype</a>
             <p class="description">This project is a pure Lua matrix datatype I created while self-learning Linear
                 Algebra.
             </p>
             <details>
                 <summary>See details</summary>
                 <p>
-                    I learned about vectors in Precalculus, and they reminded me of the Vector libraries I often see in
+                    I learned about vectors in Precalculus, and they reminded me of the Vector libraries I often see
+                    in
                     game development. I investigated further, and learned about the applications and methods of
                     representing vectors. The topics that interested me most were matrix representation and graphics
                     programming, so I did a deep-dive into Linear Algebra.
@@ -87,7 +113,8 @@
                     This datatype is fast for the most part. Properties and methods include:
                     ClassName, Size, Contents, assign, flood, fill, replace, enumerate, transpose, getDeterminant,
                     getRank, getArea, getDimensions, getInverse, getTrace, getIdentity, Zero, One, isSymmetric,
-                    isSingular, isInvertible, and find.
+                    isSingular, isInvertible, and find. I implemented all operations, including pseudo-division using
+                    Moore-Penrose pseudo-inversion for non-square matrices.
                 </p>
             </details>
         </span>
@@ -95,13 +122,16 @@
         <hr>
 
         <span>
-            <a class="title" href="https://github.com/Bububooo3/pylua-ouroboros">PyLua Uroboros Quine</a>
+            <a class="title" onclick='offsite("https://github.com/Bububooo3/pylua-ouroboros");'
+                style="cursor: pointer;">PyLua Uroboros Quine</a>
             <p class="description">An Ouroboros program that runs in Lua and Python.</p>
             <details>
                 <summary>See details</summary>
                 <p>
-                    In programming, an Ouroboros is a program that outputs a program in a different language that will
-                    output the initial program. In this case, I have a Lua program "A" that when run will produce Python
+                    In programming, an Ouroboros is a program that outputs a program in a different language that
+                    will
+                    output the initial program. In this case, I have a Lua program "A" that when run will produce
+                    Python
                     program "B." When Python program "B." is run, it will produce Lua program "A." There is an
                     interesting project where someone used 128 languages in an Ouroboros. This concept is related to
                     "bootstrapping," which is a common way to kickstart self-compiling languages.
@@ -112,12 +142,15 @@
         <hr>
 
         <span>
-            <a class="title" href="https://github.com/Bububooo3/lua-brainf-interpreter">BrainF*** Interpreter</a>
-            <p class="description">A Lua-based program that interprets and runs BF code with a user-friendly CLI.</p>
+            <a class="title" onclick='offsite("https://github.com/Bububooo3/lua-brainf-interpreter");'
+                style="cursor: pointer;">BrainF*** Interpreter</a>
+            <p class="description">A Lua-based program that interprets and runs BF code with a user-friendly CLI.
+            </p>
             <details>
                 <summary>See details</summary>
                 <p>
-                    BrainFuck is an esoteric programming language, which means it is meant to fulfill the bare-minimum
+                    BrainFuck is an esoteric programming language, which means it is meant to fulfill the
+                    bare-minimum
                     requirements needed to be considered Turing-Complete. The language has 8 commands, which makes
                     creating an interpreter less of a hassle than it is for most other languages. This pure Lua BF
                     interpreter was a personal project I set out to complete after learning about the language at a
@@ -129,22 +162,25 @@
         <hr>
 
         <span>
-            <a class="title" href="https://github.com/Bububooo3/pancake-maker-code">Automatic Pancake Maker</a>
+            <a class="title" onclick='offsite("https://github.com/Bububooo3/pancake-maker-code");'
+                style="cursor: pointer;">Automatic Pancake Maker</a>
             <p class="description">Arduino code for an automatic pancake maker.</p>
             <details>
                 <summary>See details</summary>
                 <p>
-                    For my senior engineering class, I chose to create an automatic pancake maker. My partner Jackson
+                    For my senior engineering class, I chose to create an automatic pancake maker. My partner
+                    Jackson
                     and I worked together on the planning. During prototyping, I did the coding and wiring, while he
                     focused on the design and mechanical assembly.
                 </p>
             </details>
         </span>
 
-        <hr>
+        <!-- <hr>
 
         <span>
-            <a class="title" href="https://github.com/Bububooo3/roblox-api-dictionary">Roblox API Dictionary (RAPID)</a>
+            <a class="title" onclick='offsite("https://github.com/Bububooo3/roblox-api-dictionary");'
+                style="cursor: pointer;">Roblox API Dictionary (RAPID)</a>
             <p class="description">A Python-based web API and Luau library for retrieving information on Roblox objects
                 and their properties.</p>
             <details>
@@ -156,9 +192,11 @@
                     all object types to GitHub, not just scripts and folders.
                 </p>
             </details>
-        </span>
+        </span> -->
     </div>
-
+    <br>
+    <br>
+    <hr>
     <!-- Footer -->
     <footer>
         <div class="footer-column">
@@ -186,11 +224,15 @@
         <div class="item"><a href="about.html">About</a></div>
         <div class="item"><a href="blogs.html">Blogs</a></div>
         <hr style="border: 1px solid white;">
-        <div class="item"><a href="#" onclick="window.location.reload()">reload page</a></div>
+        <div class="item"><a href="javascript:void(0);" onclick="window.location.reload()">reload page</a></div>
+        <div class="item"><a href="javascript:void(0);" onclick="copyTxt()">copy selection</a></div>
+        <hr style="border: 1px solid white;">
+        <div class="item"><a href="javascript:void(0);" onclick="randomBlog()">random blog</a></div>
     </div>
 
     <!-- Scripts -->
     <script src="scripts/pages/index.js"></script>
+    <script src="scripts/global/main.js"></script>
     <script src="scripts/global/context-menu.js"></script>
     <script src="scripts/global/typewriter.js"></script>
 </body>

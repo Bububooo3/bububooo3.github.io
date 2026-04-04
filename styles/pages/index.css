@@ -9,7 +9,8 @@
   border: 1px dashed #fffed7;
 }
 
-.project-list span p, details {
+.project-list span p,
+details {
   color: white;
   padding-left: 10%;
   padding-right: 10%;
@@ -19,7 +20,8 @@
   cursor: pointer;
 }
 
-.project-list span details ul, p {
+.project-list span details ul,
+p {
   cursor: default;
 }
 
@@ -59,3 +61,5 @@ div.block {
   padding-top: 1%;
   padding-bottom: 1%;
 }
+
+

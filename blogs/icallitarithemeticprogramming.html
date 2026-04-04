@@ -1,0 +1,467 @@
+<html lang="en">
+
+<head>
+    <title>R's Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="R's Blog" />
+    <meta property="og:type" content="article" />
+    <meta name="theme-color" content="#eede00" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" type="text/css" href="../styles/global/style.css">
+    <link rel="stylesheet" type="text/css" href="../styles/global/blog.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- CUSTOM STUFF -->
+    <meta name="description" content="Something interesting I learned about boolean math!">
+    
+    <!-- MORE CUSTOM STUFF -->
+    <meta property="og:description" content="I Call It Arithmetic Programming - 3/17/26. What a nerd, amiright guys?" />
+    <meta property="og:image" content="https://github.com/Bububooo3/Bububooo3/blob/main/glitchorsomething.png" />
+    <link rel="icon" type="image/x-icon" href="../resources/images/glitchorsomething.png">
+    <meta property="og:url" content="https://bububooo3.github.io/blogs/icallitarithemeticprogramming.html" />
+</head>
+
+<!--
+TODO:
+- Make a new sample.html template
+-->
+
+<body>
+    <b>
+        <a href="../index.html">
+            <h1 style="padding-top: 5%; cursor: pointer;" class="typewriter">Richard Scott</h1>
+        </a>
+    </b>
+    <div class="back-container">
+        <h2 style="margin-bottom: 2%;" class="typewriter" id="title">I Call It Arithmetic Programming - 3/17/26</h2>
+        <a onclick="backFxn();" id="back-btn">
+            Back
+        </a>
+    </div>
+    <hr>
+    <div class="back-container">
+        <a href="contents.html?blog=icallitarithemeticprogramming.html" id="contents-link" class="lift content-box"
+            style="border: 2px solid rgba(255, 255, 255, 0.5); border-radius: 1vw; overflow: hidden;">
+            Chapters
+        </a>
+        <div class="back-container"
+            style="border: 2px solid rgba(255, 255, 255, 0.5); margin-left: 2%; border-radius: 1vw; overflow: hidden;">
+            <a href="../about.html" class="content-box">
+                About Me
+            </a>
+            <a href="../index.html#projects" class="content-box">
+                My Projects
+            </a>
+            <a href="javascript:void(0);" onclick="randomBlog();" class="content-box" style="cursor: pointer;">
+                Random
+            </a>
+        </div>
+    </div>
+    <hr>
+
+    <!-- Main Writing -->
+    <div class="section">
+        <br>
+        <a href="#background" id="background">
+            <h3>Background</h3>
+        </a>
+        <p> What I'm going to discuss is boolean math. Particularly, we're going to discuss how to use math like
+            a coding language! I'm not going over any "history of booleans," and I couldn't really find what this was
+            called
+            online, but I'm sure it's already been explored.</p>
+
+        <p>I found out about this while learning about C.P. Willans' <a
+                onclick='offsite("https://mathworld.wolfram.com/WillansFormula.html");' style="cursor: pointer;">prime
+                factory</a>. The formula is highly inefficient, but
+            it's a good demonstration of how we can use math as a programming language. In an effort to dissect the
+            formula, I delved into online research and discovered a lot of logic I find exciting as a long-time coder
+            and math
+            enthusiast.</p>
+
+        <p>If you'd like to skip the boolean algebra introduction and get to the good stuff, <a
+                href="#the-good-stuff">click
+                here</a>!</p>
+    </div>
+    <br>
+    <hr class="light">
+    <br>
+    <div class="section">
+
+        <a href="#boolean-algebra" id="boolean-algebra">
+            <h3>Boolean Algebra</h3>
+        </a>
+        <p>Let's start simple. The way boolean logic works is that we have integers a and b, which can each be
+            either 0 or 1. The logical operators AND, OR, NOT, and XOR all return 0 or 1 as well.</p>
+        <p>We're going to assume this widely accepted idea that 0 represents false and 1 represents true.</p>
+        <div class="brown-box snippet">
+            <p>Where a &in; {0, 1} and b &in; {0, 1}</p>
+            <ul>
+                <li>AND is represented by <i>a &times; b</i></li>
+                <li>OR is represented by <i>a &plus; b &minus; a &times; b</i></li>
+                <li>NOT is represented by <i>1 &minus; a</i></li>
+            </ul>
+        </div>
+
+        <p> Let's look at deriving these formulas, though. I promise it's intuitive. From now on, I'll be using 0
+            interchangeably with false
+            and 1 interchangeably with true.</p>
+    </div>
+    <br>
+    <hr class="light">
+    <br>
+    <div class="section">
+
+        <a href="#and-operator" id="and-operator">
+            <h3>AND Operator</h3>
+        </a>
+        <p>One of the simplest operators is AND. In boolean logic, AND is a 2-input function that returns true if and
+            only
+            if both
+            inputs are true. Otherwise, it's false.</p>
+        <div class="brown-box snippet">
+            f(a, b) &equals; 1 &iff; a &equals; 1 &and; b &equals; 1
+        </div>
+        <p>Thus, the operator can also be represented by multiplying the two inputs, since this process will only return
+            1
+            if both values are 1 and not 0.</p>
+        <div class="brown-box snippet">
+            f(a, b) &equals; a &times; b
+        </div>
+        <p>We can draw the <a onclick='offsite("https://en.wikipedia.org/wiki/Truth_table");'
+                style="cursor: pointer;">truth
+                table</a> like this:</p>
+        <table class="tbl">
+            <thead>
+                <tr>
+                    <th>
+                        <h4>A</h4>
+                    </th>
+                    <th>
+                        <h4>B</h4>
+                    </th>
+                    <th>
+                        <h4>OUTPUT</h4>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="true">1</td>
+                    <td class="true">1</td>
+                    <td class="true">1</td>
+                </tr>
+                <tr>
+                    <td class="true">1</td>
+                    <td class="false">0</td>
+                    <td class="false">0</td>
+                </tr>
+                <tr>
+                    <td class="false">0</td>
+                    <td class="false">0</td>
+                    <td class="false">0</td>
+                </tr>
+                <tr>
+                    <td class="false">0</td>
+                    <td class="true">1</td>
+                    <td class="false">0</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <br>
+    <hr class="light">
+    <br>
+    <div class="section">
+
+        <a href="#not-operator" id="not-operator">
+            <h3>NOT Operator</h3>
+        </a>
+        <p>AND may be simple, but NOT is by far the simplest operator we're going to talk about. It is a 1-input
+            function
+            that toggles the input, returning the opposite of its original value. NOT true is false, and NOT false is
+            true.
+        </p>
+        <div class="brown-box snippet">
+            f(a) &equals; 1 &minus; a
+        </div>
+
+        <p>The truth table here is comically short:</p>
+        <table class="tbl">
+            <thead>
+                <tr>
+                    <th>
+                        <h4>A</h4>
+                    </th>
+                    <th>
+                        <h4>OUTPUT</h4>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="true">1</td>
+                    <td class="false">0</td>
+                </tr>
+                <tr>
+                    <td class="false">0</td>
+                    <td class="true">1</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <br>
+    <hr class="light">
+    <br>
+    <div class="section">
+
+        <a href="#or-operator" id="or-operator">
+            <h3>OR Operator</h3>
+        </a>
+        <p>OR isn't complicated either. OR is another 2-input function, and it returns true if and only
+            either or both of the inputs are true. If nothing is true, then OR returns false.</p>
+        <div class="brown-box snippet">
+            f(a, b) &equals; 1 &iff; a &equals; 1 &or; b &equals; 1
+        </div>
+        <p>And from that information, we can derive this formula:</p>
+        <div class="brown-box snippet">
+            f(a, b) &equals; a &plus; b &minus; a &times; b
+        </div>
+        <p>But WHERE IN THE WORLD did this formula come from? Well the OR operator is only false in one scenario, and
+            that's
+            when neither a nor b is true. We can get this condition by writing NOT A AND NOT B. Then, we invert this
+            condition by using NOT again. Our final result is NOT ((NOT A) AND (NOT B)). If you simplify, you'll get
+            the equation mentioned above.</p>
+        <div class="brown-box snippet">
+            <p>f(a, b) &equals; 1 &minus; ( (1 &minus; a) &times; (1 &minus; b) )</p>
+            <p>&equals; 1 &minus; ( 1 &minus; a &minus; b &plus; a &times; b )</p>
+            <p>&equals; 1 &minus; 1 &plus; a &plus; b &minus; a &times; b</p>
+            <p>&equals; a &plus; b &minus; a &times; b</p>
+        </div>
+        <p>Let's make another truth table for the sake of understanding:</p>
+        <table class="tbl">
+            <thead>
+                <tr>
+                    <th>
+                        <h4>A</h4>
+                    </th>
+                    <th>
+                        <h4>B</h4>
+                    </th>
+                    <th>
+                        <h4>OUTPUT</h4>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="true">1</td>
+                    <td class="true">1</td>
+                    <td class="true">1</td>
+                </tr>
+                <tr>
+                    <td class="true">1</td>
+                    <td class="false">0</td>
+                    <td class="true">1</td>
+                </tr>
+                <tr>
+                    <td class="false">0</td>
+                    <td class="false">0</td>
+                    <td class="false">0</td>
+                </tr>
+                <tr>
+                    <td class="false">0</td>
+                    <td class="true">1</td>
+                    <td class="true">1</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <br>
+    <hr class="light">
+    <br>
+    <div class="section">
+        <a href="#finding-xor" id="finding-xor">
+            <h3>Finding XOR</h3>
+        </a>
+        <p>The XOR operator is short for "exclusive or," which is only true if either a or b is true (but not both
+            simultaneously). I'll give you the opportunity to try this one on your own and check your work. Given the
+            truth table and the formulas for the AND, OR, and NOT operators, derive a formula for the XOR operator.</p>
+        <br>
+        <table class="tbl">
+            <thead>
+                <tr>
+                    <th>
+                        <h4>A</h4>
+                    </th>
+                    <th>
+                        <h4>B</h4>
+                    </th>
+                    <th>
+                        <h4>OUTPUT</h4>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="true">1</td>
+                    <td class="true">1</td>
+                    <td class="false">0</td>
+                </tr>
+                <tr>
+                    <td class="true">1</td>
+                    <td class="false">0</td>
+                    <td class="true">1</td>
+                </tr>
+                <tr>
+                    <td class="false">0</td>
+                    <td class="false">0</td>
+                    <td class="false">0</td>
+                </tr>
+                <tr>
+                    <td class="false">0</td>
+                    <td class="true">1</td>
+                    <td class="true">1</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <p>
+            Remember, a &in; {0, 1} and b &in; {0, 1}! To help you figure this out, we'll quickly identify a couple of
+            relevant <a
+                onclick="offsite('https://www.geeksforgeeks.org/digital-logic/boolean-algebra/#laws-for-boolean-algebra');"
+                style="cursor: pointer;">laws of Boolean Algebra</a>:</p>
+        <h4 style="text-align: center; font-size: 30px;">Idempotent Laws</h4>
+        <div class="brown-box snippet">
+            a &plus; a &equals; a
+        </div>
+        <div class="brown-box snippet">
+            a &times; a &equals; a
+        </div>
+        <h4 style="text-align: center; font-size: 30px;">Absorption Law</h4>
+        <div class="brown-box snippet">
+            a &plus; (a &times; b) &equals; a
+        </div>
+        <p>Ok, now you're ready to take a stab at deriving XOR.</p>
+        <br>
+        <span>
+            <h4 style="text-align: center; font-size: 30px;">Enter your simplified answer below.</h4>
+            <div>
+                <p id="XOR-eqn" contenteditable="true" class="snippet brown-box answer-box">(type here)</p>
+            </div>
+        </span>
+        <div class="brown-box snippet">
+            <details onclick="checkAnswer('XOR-eqn');">
+                <summary>( CHECK YOUR ANSWER )</summary>
+            </details>
+            <br>
+            <details onclick="clearAnswer('XOR-eqn');">
+                <summary>( CLEAR YOUR ANSWER )</summary>
+            </details>
+        </div>
+        <br>
+        <details>
+            <summary>[ VIEW THE ANSWER ]</summary>
+            <div class="brown-box snippet">
+                f(a, b) &equals; a &plus; b &minus; 2 &times; a &times; b
+            </div>
+        </details>
+        <br>
+        <details>
+            <summary>[ VIEW AN EXPLANATION ]</summary>
+            <p>When we solved for a function representing the OR operator, we used the truth table and our existing
+                knowledge of AND and NOT to figure things out. Similarly, we can use our understanding of the AND, OR,
+                and NOT operators to derive a formula for XOR.</p>
+            <p> XOR is true if and only if a is true AND b is false, or a is false AND b is true. From there, we derive
+                an expression and simplify.</p>
+            <p>I encourage you to check the work yourself, and as you do, remember the new rules we just introduced.</p>
+
+            <div class="brown-box snippet"
+                style="max-width: 40vw; width: 100%; margin: 0 auto; overflow-x: auto; word-wrap: break-word;">
+                <p>f(a, b) &equals; (a &times; (1 &minus; b) ) &plus; (b &times; (1 &minus; a) ) &minus; (a &times; (1
+                    &minus;
+                    b) ) &times; (b &times; (1 &minus; a))</p>
+                <p>&equals; (a &minus; a &times; b) &plus; (b &minus; a &times; b) &minus; a &times; b &times; (1
+                    &minus; a) &times; (1 &minus; b)</p>
+                <p>&equals; a &plus; b &minus; 2 &times; a &times; b &minus; a &times; b &times; (1 &minus; a) &times;
+                    (1 &minus; b)</p>
+                <p>&equals; a &plus; b &minus; 2 &times; a &times; b &minus; a &times; b &times; (1 &minus; b &minus; a
+                    &plus; a &times; b)</p>
+                <p>&equals; a &plus; b &minus; 2 &times; a &times; b &minus; a &times; b &plus; a &times; b<sup>2</sup>
+                    &plus; a<sup>2</sup> &times; b &minus; a<sup>2</sup> &times; b<sup>2</sup>
+                </p>
+                <p>&equals; a &plus; b &minus; 2 &times; a &times; b &minus; 2 &times; a &times; b &minus; a &times; b
+                    &plus; a &times; b &plus; a &times; b &minus; a &times; b </p>
+                <p>&equals; a &plus; b &minus; a &times; b &minus; a &times; b &minus; a &times; b &plus; a &times; b
+                    &plus; a &times; b &minus; a &times; b</p>
+                <p>&equals; a &plus; b &minus; 2 &times; a &times; b</p>
+            </div>
+        </details>
+
+    </div>
+    <br>
+    <hr class="light">
+    <br>
+    <div class="section">
+
+        <a href="#the-good-stuff" id="the-good-stuff">
+            <h3>The Good Stuff</h3>
+        </a>
+        <p>Now that we know basic operations, I can get started explaining the interesting part. With nothing but
+            arithmetic, we can create functions like the nth prime getter from earlier! Ours, of course, will be a
+            little more effective. Depending on the function's purpose, there can be a lot going into it. I'll include
+            some fun practice, but if you find these tools as interesting as I do you'll probably just run wild with
+            them anyways. The especially exciting part about this is that you can incorporate all kinds of knowledge
+            from all kinds of mathematics into your "programs!"</p>
+
+    </div>
+    <br>
+    <hr class="light">
+    <br>
+    <div class="section">
+        <a href="#simple-conditionals" id="simple-conditionals">
+            <h3>Simple Conditionals</h3>
+        </a>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-column">
+            <h4>Fast Travel</h4>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../blogs.html">Blogs</a></li>
+            </ul>
+            <div style="margin: 15% 0;"></div>
+            <p><i style="color: #d6d6d6; font-size: 15px;">[Right-click] to fast travel w/ context menu</i></p>
+        </div>
+        <div class="footer-column">
+            <h4>Contact</h4>
+            <p>Email: <a href="mailto:rscott7423@gmail.com">rscott7423@gmail.com</a></p>
+            <p>Created by Richard Scott</p>
+        </div>
+    </footer>
+
+    <!-- Context Menu -->
+    <div id="context-menu">
+        <h4 style="margin-top: 0; margin-bottom: 1%; text-align: center;">Fast Travel</h4>
+        <hr style="border: 1px solid white;">
+        <div class="item"><a href="../index.html">Home</div>
+        <div class="item"><a href="../about.html">About</a></div>
+        <div class="item"><a href="../blogs.html">Blogs</a></div>
+        <hr style="border: 1px solid white;">
+        <div class="item"><a href="javascript:void(0);" onclick="window.location.reload()">reload page</a></div>
+        <div class="item"><a href="javascript:void(0);" onclick="copyTxt()">copy selection</a></div>
+        <hr style="border: 1px solid white;">
+        <div class="item"><a href="javascript:void(0);" onclick="randomBlog()">random blog</a></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../scripts/global/blog.js"></script>
+    <script src="../scripts/global/context-menu.js"></script>
+    <script src="../scripts/global/typewriter.js"></script>
+</body>
+
+</html>

@@ -16,20 +16,20 @@ events.forEach((eventType) => {
       let width = window.innerWidth;
       let height = window.innerHeight;
       if (width - mouseX <= 200) {
-        contextMenu.style.borderRadius = "5px 0 5px 5px";
+        contextMenu.style.borderRadius = "10px 0 10px 10px";
         contextMenu.style.left = width - menuWidth + "px";
         contextMenu.style.top = mouseY + "px";
         if (height - mouseY <= 200) {
           contextMenu.style.top = mouseY - menuHeight + "px";
-          contextMenu.style.borderRadius = "5px 5px 0 5px";
+          contextMenu.style.borderRadius = "10px 10px 0 10px";
         }
       } else {
-        contextMenu.style.borderRadius = "0 5px 5px 5px";
+        contextMenu.style.borderRadius = "0 10px 10px 10px";
         contextMenu.style.left = mouseX + "px";
         contextMenu.style.top = mouseY + "px";
         if (height - mouseY <= 200) {
           contextMenu.style.top = mouseY - menuHeight + "px";
-          contextMenu.style.borderRadius = "5px 5px 5px 0";
+          contextMenu.style.borderRadius = "10px 10px 10px 0";
         }
       }
       contextMenu.style.visibility = "visible";
@@ -43,3 +43,22 @@ document.addEventListener("click", function (e) {
     contextMenu.style.visibility = "hidden";
   }
 });
+
+document.addEventListener("scroll", function (e) {
+  if (!contextMenu.contains(e.target)) {
+    contextMenu.style.visibility = "hidden";
+  }
+});
+
+async function copyTxt() {
+  const txt = window.getSelection().toString();
+
+  if (txt) {
+    try {
+      await navigator.clipboard.writeText(txt);
+    } catch (err) {
+      console.error("Failed to copy text: ", err);
+      alert("Copy failed");
+    }
+  }
+}

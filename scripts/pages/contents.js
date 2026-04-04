@@ -1,0 +1,51 @@
+function getUrlParameter(name) {
+  name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+  var results = regex.exec(location.search);
+  return results === null
+    ? ""
+    : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+const params = new URLSearchParams(window.location.search);
+const blog_src = params.get("blog");
+
+const titles = {
+  "icallitarithemeticprogramming.html": "I Call It Arithmetic Programming - 3/17/26"
+}
+
+if (blog_src) {
+  fetch(blog_src)
+    .then((response) => response.text())
+    .then((html) => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, "text/html");
+      const headers = doc.querySelectorAll("a[id] h3");
+      const container = document.getElementById("container");
+      const list = document.createElement("ul");
+      
+      // document.getElementById("title").innerText = titles[blog_src];
+      document.getElementById("title").innerText = doc.getElementById("title").innerText;
+
+      headers.forEach((header) => {
+        const listItem = document.createElement("li");
+        const link = document.createElement("a");
+        const anchorId = header.parentElement.id;
+
+        link.textContent = header.textContent;
+        link.href = `${blog_src}#${anchorId}`;
+
+        listItem.appendChild(link);
+        list.appendChild(listItem);
+      });
+      container.appendChild(list);
+    })
+    .catch((error) => {
+      console.error("Error fetching blog post:", error);
+      document.getElementById("container").innerHTML =
+        "<p>Failed to fetch table of contents. (Error 2)</p>";
+    });
+} else {
+  document.getElementById("container").innerHTML =
+    "<p>Failed to fetch table of contents. (Error 2)</p>";
+}

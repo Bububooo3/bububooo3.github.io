@@ -1,17 +1,33 @@
 <html lang="en">
 
 <head>
-    <title>R's Space</title>
-    <link rel="icon" type="image/x-icon" href="resources/686aee811f17a9136433502197_1b26f13217bcd743b4c9_512.jpg">
+    <title>R's Bio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="R's Bio" />
+    <meta property="og:description" content="I mean, who even is this guy? Really?" />
+    <meta property="og:image" content="https://github.com/Bububooo3/Bububooo3/blob/main/wuiwuibaguette.png" />
+    <meta property="og:url" content="https://bububooo3.github.io/about.html" />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#eea300" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/x-icon" href="resources/images/wuiwuibaguette.png">
     <link rel="stylesheet" type="text/css" href="styles/global/style.css">
     <link rel="stylesheet" type="text/css" href="styles/pages/about.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
     <b>
-        <h1 style="padding-top: 5%;" class="typewriter">Richard Scott</h1>
+        <a href="index.html">
+            <h1 style="padding-top: 5%; cursor: pointer;" class="typewriter">Richard Scott</h1>
+        </a>
     </b>
-    <h2 style="margin-bottom: 2%;" class="typewriter">About Me</h2>
+    <div class="back-container">
+        <h2 style="margin-bottom: 2%;" class="typewriter">About Me</h2>
+        <a onclick="backFxn();" id="back-btn">
+            Back
+        </a>
+    </div>
     <hr>
     <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem
         placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar
@@ -70,11 +86,15 @@
         <div class="item"><a href="about.html">About</a></div>
         <div class="item"><a href="blogs.html">Blogs</a></div>
         <hr style="border: 1px solid white;">
-        <div class="item"><a href="#" onclick="window.location.reload()">reload page</a></div>
+        <div class="item"><a href="javascript:void(0);" onclick="window.location.reload()">reload page</a></div>
+        <div class="item"><a href="javascript:void(0);" onclick="copyTxt()">copy selection</a></div>
+        <hr style="border: 1px solid white;">
+        <div class="item"><a href="javascript:void(0);" onclick="randomBlog()">random blog</a></div>
     </div>
 
     <!-- Scripts -->
     <script src="scripts/pages/about.js"></script>
+    <script src="scripts/global/main.js"></script>
     <script src="scripts/global/context-menu.js"></script>
     <script src="scripts/global/typewriter.js"></script>
 </body>

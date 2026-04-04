@@ -2,50 +2,120 @@
 
 <head>
     <title>R's Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="R's Blog" />
+    <meta property="og:description"
+        content="Sample Blog - 3/17/26. Ok? But who asked... I know I didn't! Amiright guys? Get a load of this guy! Thinks he's some blogger or something! I know! I couldn't believe either!" />
+    <meta property="og:image" content="https://github.com/Bububooo3/Bububooo3/blob/main/inthebox.png" />
+    <meta property="og:url" content="https://bububooo3.github.io/blogs/sample.html" />
+    <meta property="og:type" content="article" />
+    <meta name="theme-color" content="#eede00" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/x-icon" href="../resources/686aee811f17a9136433502197_1b26f13217bcd743b4c9_512.jpg">
     <link rel="stylesheet" type="text/css" href="../styles/global/style.css">
-    <link rel="stylesheet" type="text/css" href="../styles/pages/blog.css">
+    <link rel="stylesheet" type="text/css" href="../styles/global/blog.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
     <b>
-        <h1 style="padding-top: 5%;" class="typewriter">Richard Scott</h1>
+        <a href="../index.html">
+            <h1 style="padding-top: 5%; cursor: pointer;" class="typewriter">Richard Scott</h1>
+        </a>
     </b>
-    <h2 style="margin-bottom: 2%;" class="typewriter">Sample Blog - 3/17/26</h2>
+    <div class="back-container">
+        <h2 style="margin-bottom: 2%;" class="typewriter" id="title">Sample Blog - 4/4/26</h2>
+        <a onclick="backFxn();" id="back-btn">
+            Back
+        </a>
+    </div>
     <hr>
-    <p>Wow, you took a peek anyways! How curious. Well, it's just like I told you: there's nothing here, yet. I'm
-        cooking up some interesting math research, though, so stay tuned!</p>
+    <div class="back-container">
+        <a href="contents.html?blog=icallitarithemeticprogramming.html" id="contents-link" class="lift content-box"
+            style="border: 2px solid rgba(255, 255, 255, 0.5); border-radius: 1vw; overflow: hidden;">
+            Chapters
+        </a>
+        <div class="back-container"
+            style="border: 2px solid rgba(255, 255, 255, 0.5); margin-left: 2%; border-radius: 1vw; overflow: hidden;">
+            <a href="../about.html" class="content-box">
+                About Me
+            </a>
+            <a href="../index.html#projects" class="content-box">
+                My Projects
+            </a>
+            <a href="javascript:void(0);" onclick="randomBlog();" class="content-box" style="cursor: pointer;">
+                Random
+            </a>
+        </div>
+    </div>
+    <hr>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem
-        placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar
-        vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere.
-        Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
-    </p>
-
-    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem
-        placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar
-        vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere.
-        Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
-    </p>
-
-    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem
-        placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar
-        vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere.
-        Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
-    </p>
-
-    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem
-        placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar
-        vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere.
-        Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
-    </p>
-
-    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem
-        placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar
-        vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere.
-        Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
-    </p>
-
+    <!-- Main Writing -->
+    <div class="section">
+        <br>
+        <a href="#nonsense" id="nonsense">
+            <h3>Nonsense</h3>
+        </a>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam libero massa, sagittis vestibulum est sit amet,
+            condimentum blandit dui. Sed quis condimentum neque. Aliquam erat volutpat. Nulla facilisi. Nunc quis
+            gravida turpis. Cras ullamcorper, ligula molestie tempus porta, dolor elit facilisis velit, nec venenatis
+            arcu dui et nisi. Proin fringilla nibh purus, in consectetur purus egestas sit amet. Donec ullamcorper
+            feugiat pellentesque. Nulla suscipit aliquet pharetra. Nunc ac tristique lectus, ac gravida ante. Curabitur
+            vestibulum justo sed purus elementum vestibulum. Donec dictum ante erat, ut pellentesque turpis vulputate
+            vitae. In quis odio at lectus pellentesque accumsan sit amet id felis. Ut venenatis tellus finibus risus
+            consequat vestibulum. Phasellus gravida metus in faucibus luctus.</p>
+    </div>
+    <br>
+    <hr class="light">
+    <br>
+    <div class="section">
+        <br>
+        <a href="#tomfoolery" id="tomfoolery">
+            <h3>Tomfoolery</h3>
+        </a>
+        <p> Donec sit amet mi id metus congue efficitur. Cras eu placerat eros. Morbi laoreet odio eget orci posuere
+            tincidunt. Donec finibus mollis turpis ullamcorper rutrum. Fusce convallis, tellus ut sollicitudin
+            elementum, orci magna ullamcorper orci, porttitor malesuada dolor tortor a diam. Vestibulum sed sapien ut
+            augue aliquam dapibus a finibus diam. Etiam ac varius sapien, at aliquam purus. Donec elementum dictum
+            mauris, vitae dignissim arcu mattis ac. Donec lacinia nisi magna, non sagittis mauris sagittis eget. Nam
+            pellentesque mi ac porta laoreet. Cras sit amet varius quam.</p>
+        <p>Vivamus feugiat est nunc, id tincidunt justo fermentum vitae. Maecenas finibus interdum elementum. Sed nec
+            feugiat tortor. In scelerisque tellus tellus, nec sollicitudin tortor blandit eget. Praesent eleifend
+            placerat bibendum. In fermentum magna et blandit sollicitudin. Morbi suscipit mi magna, eu pulvinar magna
+            tristique ac.</p>
+    </div>
+    <br>
+    <hr class="light">
+    <br>
+    <div class="section">
+        <br>
+        <a href="#misdirection" id="misdirection">
+            <h3>Misdirection</h3>
+        </a>
+        <p>Praesent maximus sapien dolor. Quisque eu ultricies tortor. Curabitur nisl neque, tempor ac vehicula eu,
+            luctus eget tortor. Duis vitae auctor elit. In ac nibh purus. Morbi aliquam fermentum consequat. Phasellus
+            lobortis interdum congue. Suspendisse quis justo sit amet nulla faucibus tristique. Nullam malesuada iaculis
+            augue sit amet vehicula. In aliquam massa sit amet ligula posuere sodales. Aliquam semper, turpis vel
+            pulvinar pulvinar, lacus justo tincidunt lectus, ut dictum magna est sit amet tellus. Praesent tellus nisi,
+            pretium egestas ultricies in, rutrum at lorem. Duis tortor ligula, tristique vitae convallis sed, porttitor
+            ac turpis. Vestibulum maximus nisi id varius hendrerit. Aliquam varius vulputate urna, et cursus ante
+            pulvinar scelerisque. Aliquam sit amet neque nunc.</p>
+    </div>
+    <br>
+    <hr class="light">
+    <br>
+    <div class="section">
+        <br>
+        <a href="#gibberish" id="gibberish">
+            <h3>Gibberish</h3>
+        </a>
+        <p>Fusce vel sem metus. Vivamus varius tellus quis enim faucibus pretium. Duis posuere, velit eu convallis
+            convallis, neque mi posuere enim, ut commodo mauris nisi id dolor. Nullam maximus lorem in massa ornare
+            maximus. Etiam ac nisi vel justo vulputate ultrices vitae a lacus. Nunc eget eros eu lorem varius pulvinar.
+            Aenean libero nulla, aliquet eget mattis ac, efficitur in urna. Pellentesque habitant morbi tristique
+            senectus et netus et malesuada fames ac turpis egestas. Cras dolor magna, auctor non sem sed, commodo
+            dapibus sem. Sed maximus dictum enim, ut mollis massa porttitor id.</p>
+    </div>
     <!-- Footer -->
     <footer>
         <div class="footer-column">
@@ -73,11 +143,14 @@
         <div class="item"><a href="../about.html">About</a></div>
         <div class="item"><a href="../blogs.html">Blogs</a></div>
         <hr style="border: 1px solid white;">
-        <div class="item"><a href="#" onclick="window.location.reload()">reload page</a></div>
+        <div class="item"><a href="javascript:void(0);" onclick="window.location.reload()">reload page</a></div>
+        <div class="item"><a href="javascript:void(0);" onclick="copyTxt()">copy selection</a></div>
+        <hr style="border: 1px solid white;">
+        <div class="item"><a href="javascript:void(0);" onclick="randomBlog()">random blog</a></div>
     </div>
 
     <!-- Scripts -->
-    <script src="../scripts/pages/index.js"></script>
+    <script src="../scripts/global/blog.js"></script>
     <script src="../scripts/global/context-menu.js"></script>
     <script src="../scripts/global/typewriter.js"></script>
 </body>

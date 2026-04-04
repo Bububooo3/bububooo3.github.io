@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Datatype:wght@100..900&display=swap");
+
+.snippet {
+  background-color: rgb(82, 82, 82);
+  margin: 3% 20% 3% 20%;
+  color: white;
+  padding: 1% 5%;
+  border: 2px solid white;
+}
+
+.snippet i {
+  color: #eede00;
+}
+
+.snippet u {
+  text-decoration: none;
+  color: #08ee00;
+}
+
+.tbl {
+  color: white;
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 30%;
+  border: 2px solid white;
+  box-shadow: 5px 5px 20px #0000000c;
+  border-radius: 10px;
+  background-color: rgb(59, 68, 75);
+  padding: 2px 4px;
+}
+
+.tbl:hover {
+  box-shadow: 5px 5px 20px #0000003a;
+}
+
+.tbl th,
+.tbl td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.tbl thead {
+  color: #eede00;
+  background-color: rgb(82, 82, 82);
+  font-weight: bold;
+  font-size: 24;
+}
+
+.tbl tbody tr:hover {
+  background-color: rgb(167, 167, 167);
+}
+
+.true {
+  background-color: #4bf04b8c;
+}
+
+.false {
+  background-color: #f04b4b86;
+}
+
+details {
+  color: white;
+  text-align: center;
+}
+
+details:hover {
+  text-shadow: 0 0 4px #ffffff;
+}
+
+details div,
+p,
+li,
+ul,
+ol {
+  text-shadow: none;
+}
+
+summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+hr.light {
+  border: 1px dashed white;
+}
+
+body {
+  transition: background-color 0.8s ease-in-out;
+}
+
+.section {
+  min-height: 50vh;
+}
+
+.correct {
+  color: #4bf04b;
+  border: 2px solid #4bf04b;
+}
+
+.incorrect {
+  color: #f04b4b;
+  border: 2px solid #f04b4b;
+}
+
+.answer-box {
+  white-space: pre-line;
+  outline: 0px solid transparent;
+}
+
+.content-box {
+  /* position: absolute; */
+  right: 0;
+  bottom: 1vh;
+  /* z-index: 10; */
+  transition: transform 0.5s ease;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  box-shadow: 5px 5px 20px #0000000c;
+  padding-right: 1.5vw;
+  padding-left: 1.5vw;
+  cursor: pointer;
+  background-color: #5e5e5e1f;
+  transform: translateY(0);
+  text-align: center;
+  width: 14vw;
+  font-size: 3.5vh;
+  height: fit-content;
+}
+
+.content-box:hover {
+  box-shadow: 5px 5px 20px #0000003a;
+  background-color: #49e26f1f;
+}
+
+.four {
+  margin-right: 10vw;
+}
+
+.three {
+  margin-right: 30vw;
+}
+
+.two {
+  margin-right: 50vw;
+}
+
+.one {
+  margin-right: 70vw;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}

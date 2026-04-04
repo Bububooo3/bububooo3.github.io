@@ -1,37 +1,47 @@
 <html lang="en">
 
 <head>
-    <title>R's Space</title>
-    <link rel="icon" type="image/x-icon" href="resources/686aee811f17a9136433502197_1b26f13217bcd743b4c9_512.jpg">
+    <title>R's Blogs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="R's Blogs" />
+    <meta property="og:description"
+        content="Wait wait wait. You expect me to believe people WANT to hear this guy talk?" />
+    <meta property="og:image" content="https://github.com/Bububooo3/Bububooo3/blob/main/thethinker.png" />
+    <meta property="og:url" content="https://bububooo3.github.io/blogs.html" />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0053ee" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/x-icon" href="resources/images/thethinker.png">
     <link rel="stylesheet" type="text/css" href="styles/global/style.css">
     <link rel="stylesheet" type="text/css" href="styles/pages/blogs.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
     <b>
-        <h1 style="padding-top: 5%;" class="typewriter">Richard Scott</h1>
+        <a href="index.html">
+            <h1 style="padding-top: 5%; cursor: pointer;" class="typewriter">Richard Scott</h1>
+        </a>
     </b>
-    <h2 style="margin-bottom: 2%;" class="typewriter">Blogs</h2>
+    <div class="back-container">
+        <h2 style="margin-bottom: 2%;" class="typewriter">Blogs</h2>
+        <a onclick="backFxn();" id="back-btn">
+            Back
+        </a>
+    </div>
     <hr>
     <div class="blog-list">
-        <hr style="margin-top: 5%;">
-        <span>
-            <a class="title" href="blogs/sample.html">Sample Blog - 3/17/26</a>
-            <p class="description">This isn't a real blog. It's just a sample. If you click on this, there won't be
-                anything interesting. Sorry, not sorry. Reeses.</p>
-        </span>
-        <hr style="margin-top: 2%;">
-        <span>
-            <a class="title" href="blogs/sample.html">Sample Blog - 3/17/26</a>
-            <p class="description">This isn't a real blog. It's just a sample. If you click on this, there won't be
-                anything interesting. Sorry, not sorry. Reeses.</p>
-        </span>
-        <hr style="margin-top: 2%;">
-        <span>
-            <a class="title" href="blogs/sample.html">Sample Blog - 3/17/26</a>
-            <p class="description">This isn't a real blog. It's just a sample. If you click on this, there won't be
-                anything interesting. Sorry, not sorry. Reeses.</p>
-        </span>
+        <!-- <hr style="margin-top: 5%;"> -->
+        <!-- BLOG SECTION BEGIN -->
+
+
+        <!-- SEPARATOR -->
+        <!-- <span>
+            <a class="title" href="blogs/icallitarithemeticprogramming.html">I Call It Arithmetic Programming -
+                3/17/26</a>
+            <p class="description">Something interesting I learned about boolean math</p>
+        </span> -->
+        <!-- BLOG SECTION END-->
     </div>
 
     <!-- Footer -->
@@ -61,11 +71,15 @@
         <div class="item"><a href="about.html">About</a></div>
         <div class="item"><a href="blogs.html">Blogs</a></div>
         <hr style="border: 1px solid white;">
-        <div class="item"><a href="#" onclick="window.location.reload()">reload page</a></div>
+        <div class="item"><a href="javascript:void(0);" onclick="window.location.reload()">reload page</a></div>
+        <div class="item"><a href="javascript:void(0);" onclick="copyTxt()">copy selection</a></div>
+        <hr style="border: 1px solid white;">
+        <div class="item"><a href="javascript:void(0);" onclick="randomBlog()">random blog</a></div>
     </div>
 
     <!-- Scripts -->
-    <script src="scripts/pages/index.js"></script>
+    <script src="scripts/pages/blogs.js"></script>
+    <script src="scripts/global/main.js"></script>
     <script src="scripts/global/context-menu.js"></script>
     <script src="scripts/global/typewriter.js"></script>
 </body>
