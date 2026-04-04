@@ -1,6 +1,6 @@
 const pages = [
-  "blogs/icallitarithemeticprogramming.html",
-  // "blogs/sample.html"
+  // "blogs/icallitarithemeticprogramming.html",
+  "blogs/sample.html"
 ];
 
 var n = document.getElementsByTagName("h1")[0];
