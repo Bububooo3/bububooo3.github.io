@@ -10,10 +10,10 @@
     <link rel="stylesheet" type="text/css" href="../styles/global/style.css">
     <link rel="stylesheet" type="text/css" href="../styles/global/blog.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
+
     <!-- CUSTOM STUFF -->
     <meta name="description" content="Something interesting I learned about boolean math!">
-    
+
     <!-- MORE CUSTOM STUFF -->
     <meta property="og:description" content="I Call It Arithmetic Programming - 3/17/26. What a nerd, amiright guys?" />
     <meta property="og:image" content="https://github.com/Bububooo3/Bububooo3/blob/main/glitchorsomething.png" />
@@ -405,7 +405,6 @@ TODO:
     <hr class="light">
     <br>
     <div class="section">
-
         <a href="#the-good-stuff" id="the-good-stuff">
             <h3>The Good Stuff</h3>
         </a>
@@ -421,9 +420,47 @@ TODO:
     <hr class="light">
     <br>
     <div class="section">
-        <a href="#simple-conditionals" id="simple-conditionals">
-            <h3>Simple Conditionals</h3>
+        <a href="#indicator-fxns" id="indicator-fxns">
+            <h3>Indicator Functions</h3>
         </a>
+        <p>
+            In math, an <a href="https://en.wikipedia.org/wiki/Indicator_function">indicator funciton</a> is a function
+            that only returns 1 or 0, and only returns 1 when some condition is true. An example would be a formula that
+            returns 1 when two inputs are equal, or one that does so if and only if the input is even.
+        </p>
+        <p>
+            Here are some examples:
+        </p>
+        <br>
+        <p>Even Number Indicator Function</p>
+        <div class="brown-box snippet">
+            f(a) &equals; 1 &minus; a mod 2
+        </div>
+        <br>
+        <p>Integer Equality Indicator Function</p>
+        <div class="brown-box snippet">
+            f(a,b) &equals; 1 &minus; min(1, |a &minus; b|)
+        </div>
+        <br>
+        <p>As you might have guessed by now, mod, min, abs, and other functions are great for this kind of thing.
+            Indicator functions are basically if statements in the arithmetic programming world. More on that later, but
+            right now it's good to know that mod gets the remainder of dividing the two numbers, min returns the lowest
+            value input, absolute value makes the input positive no matter what, floor rounds down to the nearest
+            integer, and ceiling rounds up to the nearest integer. Ceiling is actually equal to -floor(-a)! It makes
+            sense if you think about it, and it's a conclusion you could probably come to on your own.</p>
+    </div>
+    <br>
+    <hr class="light">
+    <br>
+    <div class="section">
+        <a href="#summations" id="summations">
+            <h3>Summations</h3>
+        </a>
+        <p>
+            Summations are like loops. This is where I started getting excited, at least. At this point, we're getting
+            to understand the math behind that prime factory we once mentioned. Now, how can that be?
+        </p>
+
     </div>
     <!-- Footer -->
     <footer>
