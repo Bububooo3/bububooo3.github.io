@@ -1,8 +1,9 @@
 const blogFiles = [
     // 'blogs/icallitarithemeticprogramming.html'
-    'blogs/sample.html',
-    'blogs/sample.html',
-    'blogs/sample.html'
+    // 'blogs/sample.html',
+    // 'blogs/sample.html',
+    // 'blogs/sample.html'
+    'blogs/copyproblem.html',
 ];
 
 async function loadBlogSummaries() {
