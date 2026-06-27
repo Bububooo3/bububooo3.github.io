@@ -3,6 +3,7 @@ const blogFiles = [
     // 'blogs/sample.html',
     // 'blogs/sample.html',
     // 'blogs/sample.html'
+    "../blogs/airisskassessmentsandalegacyofdiscrimination.html",
     'blogs/copyproblem.html',
 ];
 

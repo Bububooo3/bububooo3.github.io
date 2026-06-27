@@ -1,6 +1,7 @@
 const pages = [
   // "../blogs/icallitarithemeticprogramming.html",
   // "../blogs/sample.html",
+  "../blogs/airisskassessmentsandalegacyofdiscrimination.html",
   "../blogs/copyproblem.html"
 ];
 
