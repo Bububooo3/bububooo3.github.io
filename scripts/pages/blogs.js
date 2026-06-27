@@ -3,8 +3,8 @@ const blogFiles = [
     // 'blogs/sample.html',
     // 'blogs/sample.html',
     // 'blogs/sample.html'
-    "../blogs/airisskassessmentsandalegacyofdiscrimination.html",
     'blogs/copyproblem.html',
+    "../blogs/airisskassessmentsandalegacyofdiscrimination.html",
 ];
 
 async function loadBlogSummaries() {
@@ -16,7 +16,7 @@ async function loadBlogSummaries() {
             const htmlString = await response.text();
             const parser = new DOMParser();
             const doc = parser.parseFromString(htmlString, 'text/html');
-            
+
             const title = doc.getElementById("title").innerText || "No Title";
             const description = doc.querySelector('meta[name="description"]')?.content || "No description";
 
