@@ -1,6 +1,8 @@
 const pages = [
   // "blogs/icallitarithemeticprogramming.html",
-  "blogs/sample.html"
+  // "blogs/sample.html"
+  '../blogs/copyproblem.html',
+  "../blogs/airisskassessmentsandalegacyofdiscrimination.html",
 ];
 
 var n = document.getElementsByTagName("h1")[0];
@@ -9,7 +11,7 @@ if (n.id != "index") {
   n.addEventListener("mouseenter", (e) => {
     n.innerHTML = "Richard Scott <i class='material-icons'  style='font-size: inherit; vertical-align: middle;'>compare_arrows home</i>";
   });
-  
+
   n.addEventListener("mouseleave", (e) => {
     n.innerText = "Richard Scott";
   });
