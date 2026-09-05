@@ -117,11 +117,9 @@ body {
   outline: 0px solid transparent;
 }
 
-.content-box {
-  /* position: absolute; */
+/* .content-box {
   right: 0;
   bottom: 1vh;
-  /* z-index: 10; */
   transition: transform 0.5s ease;
   background-color: rgba(0, 0, 0, 0);
   border: none;
@@ -135,7 +133,43 @@ body {
   width: 14vw;
   font-size: 3.5vh;
   height: fit-content;
+} */
+
+/* .content-box {
+  transition: transform 0.5s ease;
+  background-color: #5e5e5e1f;
+  border: none;
+  box-shadow: 5px 5px 20px #0000000c;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  transform: translateY(0);
+  text-align: center;
+  width: 14vw;
+  font-size: clamp(14px, 3.5vh, 30px);
+  box-sizing: border-box;
+  white-space: nowrap;
+} */
+
+.content-box {
+  transition: transform 0.5s ease;
+  background-color: #5e5e5e1f;
+  border: none;
+  box-shadow: 5px 5px 20px #0000000c;
+  padding: 0.5em 1em;
+  margin: 0;
+  cursor: pointer;
+  transform: translateY(0);
+  text-align: center;
+
+  min-width: 200px;
+  flex: 1 1 auto;
+  font-size: clamp(14px, 2vw, inherit);
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
+
 
 .content-box:hover {
   box-shadow: 5px 5px 20px #0000003a;

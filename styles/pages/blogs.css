@@ -11,10 +11,24 @@
 
 .blog-list span p {
   color: white;
-  padding-left: 10%;
-  padding-right: 10%;
+  /* padding-left: 10%;
+  padding-right: 10%; */
+  font-size: clamp(10px, 5vw, 20px);
+  text-indent: 0 !important;
+  padding: 0;
+  margin: 0;
+  display: block;
+  width: 75%;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .blog-list span .title {
-  font-size: 30px;
+  font-size: clamp(15px, 5vw, 30px);
+  text-align: center;
+  text-indent: 0 !important;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  width: 75%;
 }

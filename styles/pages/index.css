@@ -12,8 +12,16 @@
 .project-list span p,
 details {
   color: white;
-  padding-left: 10%;
-  padding-right: 10%;
+  /* padding-left: 10%;
+  padding-right: 10%; */
+  font-size: clamp(10px, 5vw, 20px);
+  text-indent: 0 !important;
+  padding: 0;
+  margin: 0;
+  display: block;
+  width: 75%;
+  text-align: left;
+  margin: 0 auto;
 }
 
 .project-list span details {
@@ -30,10 +38,16 @@ p {
 }
 
 .project-list span .title {
-  font-size: 30px;
+  font-size: clamp(15px, 5vw, 30px);
+  text-align: center;
+  text-indent: 0 !important;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  width: 75%;
 }
 
-div.flex {
+/* div.flex {
   text-align: center;
   display: flex;
   justify-content: space-between;
@@ -46,6 +60,24 @@ div.flex span {
   flex: 1 1 auto;
   flex-grow: 1;
   font-size: 30px;
+  border-right: 3px solid #ffffff;
+  border-left: 3px solid #ffffff;
+} */
+
+div.flex {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 0;
+  flex-wrap: nowrap;
+}
+
+div.flex span {
+  flex: 1 1 0;
+  min-width: 0;
+  font-size: clamp(16px, 4vw, 30px);
+  white-space: nowrap;
   border-right: 3px solid #ffffff;
   border-left: 3px solid #ffffff;
 }
@@ -61,5 +93,3 @@ div.block {
   padding-top: 1%;
   padding-bottom: 1%;
 }
-
-
